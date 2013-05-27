@@ -1,0 +1,29 @@
+/* Combines all styles, ready to be output into a single CSS file. */
+/* Compass Libraries */
+/* Vendor */
+/* Settings
+-------------------------------------------------------------------- */
+/* Colours
+-------------------------------------------------------------------- */
+/* Mixins/functions */
+/* Utility functions/mixins */
+/* Generic styles */
+/* Base form styles */
+/* Base form styles */
+/* Re-usable UI elements, e.g. buttons, widgets, modals, carousels etc. */
+/* Site Layout
+-------------------------------------------------------------------- */
+/* line 29, ../dev/sass/main.scss */
+body {
+  background: purple;
+}
+
+/* Pages */
+/* Contains all styles specific to the home page. */
+/* Media Queries */
+/* Touch devices - relies on Modernizr test on load */
+/* "Tablet" specific styles */
+/* "Desktop" specific styles */
+/* Print styles */
+/* IE hacks */
+/* All IE hacks */

@@ -1,0 +1,17 @@
+{
+  "name": "ProjectName",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-peon-gui": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1"
+	  }
+}
