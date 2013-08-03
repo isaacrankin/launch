@@ -1,0 +1,10 @@
+{
+  "name": "ProjectName",
+  "version": "0.0.0",
+  "dependencies": {
+  	"modernizr" : "latest",
+    "jquery": "latest",
+    "underscore": "latest"
+  },
+  "devDependencies": {}
+}
