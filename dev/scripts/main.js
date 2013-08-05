@@ -6,33 +6,19 @@
 	//TODO: package into library called Spark or Fire or Flint or kindling
 
 
-	// Simple inheritence: http://alexsexton.com/blog/2013/04/understanding-javascript-inheritance/
-	var ParentPrototype = {
+	// Object.create allows for true Prototypal inheritence
+	// But "new" allows for a proper constructor method
+
+
+	// Define classes
+	var ParentPrototype = Object.create(Flint.Base).extend({
 
 		defaults:{
-			zero: 0,
-			one: 1,
-			_val: "fishes"
+			_val: "default value"
 		},
 
-		init: function(config){
-
-			// Copy defaults onto object, can be accessed later if needed
-			if(typeof this.defaults === "object"){
-				for(var key in this.defaults){
-					this[key] = this.defaults[key];
-				}
-			}
-
-			// Copy config properties onto object, over-writing defaults
-			if(typeof config === "object"){
-				for(var key in config){
-					this[key] = config[key];
-				}
-			}
-
-			// Must return this
-			return this;
+		init: function(){
+			console.log("Parent Initialized");
 		},
 
 		get: function(){
@@ -42,43 +28,85 @@
 		set: function(value){
 			this._val = value;
 		}
-	};
+	});
 
-	var myOptions = Object.create(ParentPrototype).init({ option: "hola" });
-	var yourOptions = Object.create(ParentPrototype).init();
+	var Child = Object.create(ParentPrototype).extend({
 
-	// When I want to change *just* my options
-	myOptions.two = 1000;
-	myOptions.set("birds");
+		init: function(){
+			this.play();
+		},
 
-	// Extend the get method on the parent.
-	myOptions.get = function(){
-		return this._val+" overide the parent method!";
+		play: function(){
+			alert('watch out and play');
+		}
+	});
 
-		// Call parent method directly - dodgy?
-		//return ParentPrototype.get.call(this)+' extended method!!';
-	}
+	var SecondChild = Object.create(ParentPrototype).extend({
+		shout: function(words){
+			return words+"!!!";
+		}
+	});
 
-	// When you wanna change yours
-	yourOptions.one = 42;
+	var GrandChild = Object.create(Child).extend({
+		init: function(){
 
-	// When we wanna change the **defaults** even after we've got our options
-	// even **AFTER** we've already created our instances
-	ParentPrototype.two = 2;
-	ParentPrototype.set("cows");
+		}
+	});
 
-	var newOptions = Object.create(myOptions);
+	var Carousel = Object.create(Flint.Base).extend({
+
+		defaults:{
+			interval: 3000,
+			pause: true
+		},
+
+		create: function(){
+
+		},
+
+		destroy: function(){
+
+		},
+
+		play:function(){
+
+		},
+
+		pause: function(){
+
+		},
+
+		transition: function(){
+
+		}
+	});
+
+	var homepageCarousel = Object.create(Carousel).extend();
+	homepageCarousel.create();
+
+	var siteCarousel = Object.create(Carousel).extend({
+		interval: 6000
+	});
+	siteCarousel.create();
 
 
-	console.log(myOptions.two); // 1000
-	console.log(yourOptions.two); // 2
-	console.log(newOptions.two); // 1000
+	console.log(siteCarousel.interval);
 
-	console.log(yourOptions.get()); // cows, inherited from parent
-	console.log(myOptions.get()); // birds, as set directly
-	myOptions.set('chickens');
 
-	console.log(newOptions.get()); // chickens, as inherited from parent
+
+
+
+	ParentPrototype.set("overrulled");
+	GrandChild.set("Grandchild is unique");
+
+	console.log(Child.get());
+	console.log(SecondChild.get());
+	console.log(GrandChild.get());
+
+	console.log(Child);
+	console.log(GrandChild);
+
+	return;
 
 
 
