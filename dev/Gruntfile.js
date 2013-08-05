@@ -25,6 +25,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		copy: {
+			main: {
+				files: [
+					{ expand: true, flatten: true, src: ['scripts/vendor/modernizr/modernizr.js'], dest: '<%= config.output %>/scripts/vendor/'}
+				]
+			}
+		},
+
 		concat: {
 			dist: {
 				src: '<%= config.working %>',
@@ -48,7 +56,7 @@ module.exports = function(grunt) {
 		watch: {
 			src: {
 				files: ['scripts/*.js', 'sass/**/*.*', '!scripts/vendor/'],
-				tasks: ['default']
+				tasks: ['compass', 'uglify:main']
 			},
 			css: {
 				files: ['/sass/{,*/}*.{scss,sass}'],
@@ -61,6 +69,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default',
 		[
 			'compass',
+			'copy',
 			'uglify:main', // concatinate and minify working JS
 			'uglify:lib' // concatinate and minify vendor JS libraries
 		]
@@ -69,14 +78,14 @@ module.exports = function(grunt) {
 	// Watch task, listens for changes
 	grunt.registerTask('watch-all',
 		[
-			'watch'
+			'watch:src'
 		]
 	);
 
 	// Watch task, listens for changes
 	grunt.registerTask('watch-styles',
 		[
-			'watch'
+			'watch:css'
 		]
 	);
 };
