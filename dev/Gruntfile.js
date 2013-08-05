@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 
 	var config = {
 		output: '..',
-		working: ['scripts/models.js',
+		working: ['scripts/lib.js',
+					'scripts/models.js',
 					'scripts/views.js',
 					'scripts/main.js'],
 		libraries: ['scripts/vendor/jquery/jquery.min.js',

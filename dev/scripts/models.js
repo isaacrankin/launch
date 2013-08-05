@@ -1,28 +1,27 @@
+var Carousel = Object.create(Flint.Base).extend({
 
-var Flint = (typeof Flint === "object") ? Flint : {};
-
-Flint.Base = {
-
-	init: function(){
-		return this;
+	defaults:{
+		interval: 3000,
+		pause: true
 	},
 
-	extend: function(instance){
-		if(typeof instance === "object"){
+	create: function(){
 
-			// Copy defaults onto object, can be accessed later if needed
-			if(typeof instance.defaults === "object"){
-				for(var key in instance.defaults){
-					this[key] = instance.defaults[key];
-				}
-			}
+	},
 
-			// Copy over other properties
-			for(var key in instance){
-				this[key] = instance[key];
-			}
-		}
-		this.init();
-		return this;
+	destroy: function(){
+
+	},
+
+	play:function(){
+
+	},
+
+	pause: function(){
+
+	},
+
+	transition: function(){
+
 	}
-}
+});
