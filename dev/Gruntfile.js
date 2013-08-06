@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 					'scripts/main.js'],
 		libraries: ['scripts/vendor/jquery/jquery.min.js',
 					'scripts/vendor/underscore/underscore-min.js',
+					'scripts/vendor/backbone/backbone-min.js',
 					'scripts/plugins.js']
 	}
 
@@ -38,6 +39,10 @@ module.exports = function(grunt) {
 			dist: {
 				src: '<%= config.working %>',
 				dest: '<%= config.output %>/scripts/main.js'
+			},
+			lib: {
+				src: '<%= config.libraries %>',
+				dest: '<%= config.output %>/scripts/lib.min.js'
 			}
 		},
 
@@ -72,7 +77,8 @@ module.exports = function(grunt) {
 			'compass',
 			'copy',
 			'uglify:main', // concatinate and minify working JS
-			'uglify:lib' // concatinate and minify vendor JS libraries
+			//'uglify:lib' // concatinate and minify vendor JS libraries
+			'concat:lib' // concatinate vendor JS libraries, use this if libraries are already minified
 		]
 	);
 
