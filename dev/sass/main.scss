@@ -3,7 +3,7 @@
 // Compass Libraries
 @import "compass/css3";
 
-/* Vendor */
+// Vendor Styles
 
 // Settings
 // --------------------------------------------------------------------
@@ -26,9 +26,6 @@ $colour-brand-secondary:#0F0;
 
 // Site Layout
 // --------------------------------------------------------------------
-body{
-  background: orange;
-}
 
 // Pages
 @import "pages/home";
