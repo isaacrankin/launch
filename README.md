@@ -1,8 +1,6 @@
-
 #Installation & Usage
 
-You will first need Node.js installed, find details here:
-http://nodejs.org/
+Before starting, be sure to check you have all the [dependencies](#dependencies) installed.
 
 1. Open the dev directory in your terminal
 2. Install JS dependencies:
@@ -21,6 +19,12 @@ http://nodejs.org/
 
 	grunt watch-all
 
-# Adding New JS Libraries
+#Dependencies<a id="dependencies"></a>
 
-# Adding New CSS Frameworks & Files
+[Node.js](http://nodejs.org/)
+[Bower](http://bower.io/)
+[Grunt JS](http://gruntjs.com/)
+
+#Adding New JS Libraries
+
+#Adding New CSS Frameworks & Files

@@ -16,3 +16,4 @@ Icon
 .idea/
 scripts/*.js
 styles/*.css
+dev/scripts/vendor/*
