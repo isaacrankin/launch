@@ -54,6 +54,12 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'<%= config.output %>/scripts/main.min.js': '<%= config.working %>'
+				},
+
+				options:{
+					sourceMap: "<%= config.output %>/scripts/main.map",
+					//sourceMappingURL: "http://localhost/frontend-boilerplate/dev/scripts/main.js", // path to map file
+					sourceMapRoot: "../dev/"
 				}
 			}
 		},
