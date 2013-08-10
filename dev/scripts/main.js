@@ -1,4 +1,6 @@
-(function(window, document, $, undefined){
+"use strict";
+
+(function(window, document, $, _){
 
 
 
@@ -7,4 +9,4 @@
 
 
 
-})(window, document, jQuery);
+})(window, document, jQuery, _);
