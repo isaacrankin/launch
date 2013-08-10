@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-	// Load all grunt tasks
+	// Load all grunt tasks automatically
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	var config = {
@@ -11,7 +11,6 @@ module.exports = function(grunt) {
 					'scripts/main.js'],
 		libraries: ['scripts/vendor/jquery/jquery.min.js',
 					'scripts/vendor/underscore/underscore-min.js',
-					'scripts/vendor/backbone/backbone-min.js',
 					'scripts/plugins.js']
 	}
 
@@ -77,19 +76,19 @@ module.exports = function(grunt) {
 			'compass',
 			'copy',
 			'uglify:main', // concatinate and minify working JS
-			//'uglify:lib' // concatinate and minify vendor JS libraries
+			//'uglify:lib' // concatinate and minify vendor JS libraries, use this if libraries are not minified
 			'concat:lib' // concatinate vendor JS libraries, use this if libraries are already minified
 		]
 	);
 
-	// Watch task, listens for changes
+	// Watch task, listens for changes on all workin JS and SCSS
 	grunt.registerTask('watch-all',
 		[
 			'watch:src'
 		]
 	);
 
-	// Watch task, listens for changes
+	// Watch task, listens for stlye changes only
 	grunt.registerTask('watch-styles',
 		[
 			'watch:css'
