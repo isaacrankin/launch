@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 
 	var config = {
 		output: '..',
-		working: ['scripts/lib.js',
+		working_folder: "dev",
+		working: ['scripts/flint.js',
 					'scripts/models.js',
 					'scripts/views.js',
 					'scripts/main.js'],
@@ -57,9 +58,8 @@ module.exports = function(grunt) {
 				},
 
 				options:{
-					sourceMap: "<%= config.output %>/scripts/main.map",
-					//sourceMappingURL: "http://localhost/frontend-boilerplate/dev/scripts/main.js", // path to map file
-					sourceMapRoot: "../dev/"
+					sourceMap: "<%= config.output %>/scripts/sourcemaps/main.map",
+					sourceMapRoot: "../../<%= config.working_folder %>/"
 				}
 			}
 		},

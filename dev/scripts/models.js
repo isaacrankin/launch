@@ -1,1 +1,1 @@
-console.log("horese");
+"use strict";
