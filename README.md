@@ -10,7 +10,6 @@ Before starting, be sure to check you have all the dependencies installed.
 
 	bower install
 
-
 3. Install Grunt dependencies:
 
 	npm install

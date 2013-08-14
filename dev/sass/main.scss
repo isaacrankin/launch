@@ -9,6 +9,7 @@
 // --------------------------------------------------------------------
 $layout-breakpoint-tablet:768px;
 $layout-breakpoint-desktop:1024px;
+$layout-grid-gutter:20px;
 
 // Colours
 // --------------------------------------------------------------------
@@ -18,10 +19,8 @@ $colour-brand-secondary:#0F0;
 // Mixins/functions
 @import "partials/mixins";
 
-/* Generic styles */
+// Generic styles
 @import "partials/typography";
-@import "partials/forms";
-@import "partials/tables";
 @import "partials/elements";
 
 // Site Layout
