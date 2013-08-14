@@ -23,7 +23,5 @@ Icon
 .idea/
 *.sass-cache
 *node_modules
-scripts/*.js
-styles/*.css
 dev/scripts/vendor/*
 scripts/sourcemaps/*
