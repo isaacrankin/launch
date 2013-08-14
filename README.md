@@ -2,7 +2,10 @@
 
 Before starting, be sure to check you have all the dependencies installed.
 
-1. Open the dev directory in your terminal
+1. Open the "dev" directory in your terminal
+
+	cd dev
+
 2. Install JS dependencies:
 
 	bower install
@@ -29,6 +32,8 @@ Before starting, be sure to check you have all the dependencies installed.
 * [Node.js](http://nodejs.org/)
 * [Bower](http://bower.io/)
 * [Grunt JS](http://gruntjs.com/)
+* [Sass](http://sass-lang.com/)
+* [Compass](http://compass-style.org/)
 
 *****
 
