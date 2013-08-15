@@ -1,19 +1,16 @@
-"use strict";
+//"use strict";
 
-(function(window, document, $, _){
+(function(window){
 
+	var Flint = {};
 
-	var Flint = function(instance){
+	Flint.Base = {
 
-		this._utils = {
+		init: function(){
+			return this;
+		},
 
-			getTime: function(){
-				return "Go to work"
-			}
-
-		}
-
-		this.extend = function(instance){
+		extend: function(instance, initiate){
 			if(typeof instance === "object"){
 
 				// Copy defaults onto object, can be accessed later if needed
@@ -29,24 +26,16 @@
 				}
 			}
 
+			// Disable auto initiate
+			if(initiate !== false)
+				this.init();
+
 			return this;
 		}
-
-
-		return this.extend();
 	}
 
+	if(typeof window === "object" && typeof window.document === "object"){
+		window.Flint = Flint;
+	}
+})(window);
 
-	var Overlay = new Flint({
-		testa: "horeses"
-	});
-
-
-	console.log(Overlay._utils.getTime());
-	console.log(Overlay.testa);
-
-
-
-
-
-})(window, document, jQuery, _);
