@@ -6,12 +6,12 @@ module.exports = function(grunt) {
 	var config = {
 		output: '..',
 		working_folder: "dev",
-		working: ['scripts/flint.js',
-					'scripts/models.js',
+		working: ['scripts/models.js',
 					'scripts/views.js',
 					'scripts/main.js'],
 		libraries: ['scripts/vendor/jquery/jquery.min.js',
 					'scripts/vendor/underscore/underscore-min.js',
+					'scripts/vendor/backbone/backbone-min.js',
 					'scripts/plugins.js']
 	}
 
