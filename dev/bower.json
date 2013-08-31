@@ -1,11 +1,11 @@
 {
-  "name": "ProjectName",
-  "version": "0.0.0",
-  "dependencies": {
-  	"modernizr" : "latest",
-    "jquery": "~1.10.2",
-    "backbone": "latest",
-    "underscore": "latest"
-  },
-  "devDependencies": {}
+	"name": "ProjectName",
+	"version": "0.0.0",
+	"dependencies": {
+		"modernizr" : "latest",
+		"jquery": "~1.9.1",
+		"backbone": "latest",
+		"underscore": "latest"
+	},
+	"devDependencies": {}
 }
