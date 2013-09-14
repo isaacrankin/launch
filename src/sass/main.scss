@@ -1,33 +1,25 @@
 // Combines all styles, ready to be output into a single CSS file.
 
-// Compass Libraries
+// Libraries
 @import "compass/css3";
 
-// Vendor Styles
-
 // Settings
-// --------------------------------------------------------------------
 $layout-breakpoint-tablet:768px;
 $layout-breakpoint-desktop:1024px;
 $layout-grid-gutter:20px;
 
 // Colours
-// --------------------------------------------------------------------
 $colour-brand-primary:#F00;
 $colour-brand-secondary:#0F0;
 
-// Mixins/functions
-@import "partials/mixins";
-
 // Generic styles
 @import "partials/typography";
+@import "partials/form";
+@import "partials/grid";
 @import "partials/elements";
 
-// Site Layout
-// --------------------------------------------------------------------
-
-// Pages
-@import "pages/home";
+// Components
+@import "components/layout";
 
 // Media Queries
 @import "device/touch";

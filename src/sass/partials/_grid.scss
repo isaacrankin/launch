@@ -1,0 +1,51 @@
+$grid-total-columns:12;
+$grid-gutter:15px;
+
+.row{
+	width:100%;
+	clear:both;
+
+	[class^="col-"],
+	[class*="col-"]{
+		@include box-sizing("border-box");
+		padding:0 $grid-gutter;
+		float:left;
+
+		img{
+			max-width: 100%;
+		}
+
+		&:first-child h1,
+		&:first-child h2,
+		&:first-child h3,
+		&:first-child h4,
+		&:first-child h5,
+		&:first-child h6{
+			margin-top:0;
+		}
+	}
+
+	[class^="col-"]:first-child,
+	[class*="col-"]:first-child{
+		padding-left:0;
+	}
+
+	[class^="col-"]:last-child,
+	[class*="col-"]:last-child{
+		padding-right:0;
+	}
+}
+
+// Grid calculation for percentages
+@function gridCalc($col-number, $total-columns) {
+	@return percentage(($col-number / $total-columns));
+}
+
+// Creating column classes
+@for $i from 1 through $grid-total-columns {
+	.row {
+		.col-#{$i} {
+			width: percentage(($i / $grid-total-columns));
+		}
+	}
+}
