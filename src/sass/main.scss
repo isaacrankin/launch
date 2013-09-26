@@ -21,6 +21,9 @@ $colour-brand-secondary:#0F0;
 // Components
 @import "components/layout";
 
+body{
+	background: yellow;
+}
 
 // Media Queries
 @import "device/touch";

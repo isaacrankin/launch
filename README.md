@@ -2,9 +2,9 @@
 
 Before starting, be sure to check you have all the dependencies installed.
 
-1. Open the "dev" directory in your terminal
+1. Open the "src" directory in your terminal
 
-	cd dev
+	cd src
 
 2. Install JS dependencies:
 

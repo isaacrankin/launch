@@ -4,9 +4,8 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	var workingPath = "../",
-		outputPath = "../../",
+		outputPath = "../../build/",
 		vendorPath = "../vendor/";
-
 
 	var config = {
 
