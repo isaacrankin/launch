@@ -1,28 +1,5 @@
-# General rules
-# https://github.com/github/gitignore
-.*
-!.gitignore
-*~
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-# Folder config file
-Desktop.ini
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-dev/npm-debug.log
-
-# Application rules
 .idea/
-*.sass-cache
-*node_modules
-src/vendor/*
-scripts/sourcemaps/*
+build/scripts/*.js
+build/styles/*.css
+build/styles/vendor/*.css
+build/scripts/vendor/*.js

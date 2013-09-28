@@ -91,8 +91,8 @@ module.exports = function(grunt) {
 				},
 				options:{
 					sourceMappingURL: "sourcemaps/main.map",
-					sourceMap: "../../scripts/sourcemaps/main.map",
-					sourceMapRoot: "../../src/build/"
+					sourceMap: "../../build/scripts/sourcemaps/main.map",
+					sourceMapRoot: "../../../src/config/"
 				}
 			}
 		},

@@ -1,0 +1,23 @@
+// Touch devices - relies on Modernizr test on load
+// --------------------------------------------------------------------
+html.touch{
+
+}
+
+// "Tablet" specific styles
+// --------------------------------------------------------------------
+@media only screen and (min-width: $layout-breakpoint-tablet) and (max-width: $layout-breakpoint-desktop) {
+
+}
+
+// "Desktop" specific styles
+// --------------------------------------------------------------------
+@media only screen and (min-width: $layout-breakpoint-desktop) {
+
+}
+
+// Print styles
+// --------------------------------------------------------------------
+@media print {
+
+}

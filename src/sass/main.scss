@@ -21,15 +21,5 @@ $colour-brand-secondary:#0F0;
 // Components
 @import "components/layout";
 
-body{
-	background: yellow;
-}
-
 // Media Queries
-@import "device/touch";
-@import "device/tablet";
-@import "device/desktop";
-@import "device/print";
-
-// IE hacks
-@import "partials/iehacks";
+@import "partials/device";

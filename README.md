@@ -2,9 +2,9 @@
 
 Before starting, be sure to check you have all the dependencies installed.
 
-1. Open the "src" directory in your terminal
+1. Open "src/config" directory
 
-	cd src
+	cd src/config
 
 2. Install JS dependencies:
 
