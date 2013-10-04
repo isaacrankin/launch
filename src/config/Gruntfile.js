@@ -34,13 +34,29 @@ module.exports = function(grunt) {
 
 		config: config,
 
+		// Import package manifest
+		pkg: grunt.file.readJSON("package.json"),
+
+		// Banner definitions
+		meta: {
+			banner: "/*\n" +
+				" *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n" +
+				" *  <%= pkg.description %>\n" +
+				" *  <%= pkg.repository %>\n" +
+				" *\n" +
+				" *  Made by <%= pkg.author.name %>\n" +
+				" *  Under <%= pkg.license %> License\n" +
+				" */\n"
+		},
+
 		compass: {
 			dist: {
 				options: {
 					environment: 'production',
 					cssDir: '<%= config.outputPath %>styles',
 					sassDir: '<%= config.workingPath %>sass',
-					outputStyle: "compressed"
+					outputStyle: "compressed",
+					banner: "<%= meta.banner %>"
 				}
 			}
 		},
@@ -92,7 +108,8 @@ module.exports = function(grunt) {
 				options:{
 					sourceMappingURL: "sourcemaps/main.map",
 					sourceMap: "../../build/scripts/sourcemaps/main.map",
-					sourceMapRoot: "../../../src/config/"
+					sourceMapRoot: "../../../src/config/",
+					banner: "<%= meta.banner %>"
 				}
 			}
 		},
@@ -115,19 +132,17 @@ module.exports = function(grunt) {
 		notify: {
 			watch_all: {
 				options: {
-					//title: 'Task Complete',  // optional
-					message: 'Compass and Uglify finished running.' //required
+					message: 'Compass and Uglify finished running.'
 				}
 			},
 			watch_styles: {
 				options: {
-					//title: 'Task Complete',  // optional
-					message: 'Compass finished running.' //required
+					message: 'Compass finished running.'
 				}
 			},
 			watch_scripts: {
 				options: {
-					message: 'Uglify finished running.' //required
+					message: 'Uglify finished running.'
 				}
 			}
 		}
@@ -144,7 +159,7 @@ module.exports = function(grunt) {
 		]
 	);
 
-	// Watch task, listens for changes on all workin JS and SCSS
+	// Watch task, listens for changes on all working JS and SCSS
 	grunt.registerTask('watch-all',
 		[
 			'watch:src'
@@ -158,7 +173,7 @@ module.exports = function(grunt) {
 		]
 	);
 
-	// Watch task, listens for JavaScript changes only
+	// Watch task, listens for "working" JavaScript changes only
 	grunt.registerTask('watch-scripts',
 		[
 			'watch:js'
