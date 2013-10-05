@@ -87,8 +87,7 @@ module.exports = function(grunt) {
 					environment: 'production',
 					cssDir: '<%= config.outputPath %>styles',
 					sassDir: '<%= config.workingPath %>sass',
-					outputStyle: "compressed",
-					banner: "<%= meta.banner %>"
+					outputStyle: "compressed"
 				}
 			}
 		},
@@ -140,8 +139,7 @@ module.exports = function(grunt) {
 				options:{
 					sourceMappingURL: "sourcemaps/main.map",
 					sourceMap: "../../build/scripts/sourcemaps/main.map",
-					sourceMapRoot: "../../../src/config/",
-					banner: "<%= meta.banner %>"
+					sourceMapRoot: "../../../src/config/"
 				}
 			}
 		},
