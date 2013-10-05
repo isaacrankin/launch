@@ -4,3 +4,4 @@ build/styles/*.css
 build/styles/vendor/*.css
 build/scripts/vendor/*.js
 build/scripts/sourcemaps/*
+build/images/*.png*

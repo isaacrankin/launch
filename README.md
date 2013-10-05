@@ -20,9 +20,17 @@ Before starting, be sure to check you have all the dependencies installed.
 	grunt
 
 
-5. Watch for changes with Grunt:
+5. Watch for changes with Grunt.
 
-	grunt watch-all
+   Watch for any changes to working files: grunt watch-all
+
+	or
+
+	grunt watch-scripts
+
+	or
+
+	grunt watch-styles
 
 *****
 

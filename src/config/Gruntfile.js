@@ -8,13 +8,9 @@ module.exports = function(grunt) {
 		vendorPath = "../vendor/";
 
 	var config = {
-
 		workingPath: workingPath,
-
 		outputPath: outputPath,
-
 		vendorPath: vendorPath,
-
 		vendorFiles: {
 			styles: [vendorPath+"normalize-css/normalize.css"],
 			scripts: [vendorPath+"jquery/jquery.min.js",
@@ -22,7 +18,6 @@ module.exports = function(grunt) {
 					vendorPath+"/backbone/backbone-min.js",
 					vendorPath+"/scripts/plugins.js"]
 		},
-
 		workingFiles: {
 			scripts: [workingPath+"scripts/models.js",
 					workingPath+"scripts/views.js",
@@ -33,6 +28,43 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		config: config,
+
+		imagemin: {
+			png: {
+				options: {
+					optimizationLevel: 7
+				},
+				files: [
+					{
+						// Set to true to enable the following options…
+						expand: true,
+						// cwd is 'current working directory'
+						cwd: '<%= config.outputPath %>images/',
+						src: ['**/*.png'],
+						// Could also match cwd line above. i.e. project-directory/img/
+						dest: '<%= config.outputPath %>images/',
+						ext: '.png'
+					}
+				]
+			},
+			jpg: {
+				options: {
+					progressive: true
+				},
+				files: [
+					{
+						// Set to true to enable the following options…
+						expand: true,
+						// cwd is 'current working directory'
+						cwd: '<%= config.outputPath %>images/',
+						src: ['**/*.jpg'],
+						// Could also match cwd. i.e. project-directory/img/
+						dest: '<%= config.outputPath %>images/',
+						ext: '.jpg'
+					}
+				]
+			}
+		},
 
 		compass: {
 			dist: {
@@ -162,6 +194,13 @@ module.exports = function(grunt) {
 	grunt.registerTask('watch-scripts',
 		[
 			'watch:js'
+		]
+	);
+
+	// Compress image in build directory
+	grunt.registerTask('image-min',
+		[
+			'imagemin'
 		]
 	);
 };
