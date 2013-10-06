@@ -101,8 +101,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: '<%= config.outputPath %>styles/vendor/',
 				src: ['*.css', '!*.min.css'],
-				dest: '<%= config.outputPath %>styles/vendor/',
-				ext: '.min.css'
+				dest: '<%= config.outputPath %>styles/vendor/'
 			}
 		},
 

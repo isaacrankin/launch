@@ -5,8 +5,7 @@
 	Test out responsive media queries
 	Either fix up SCSS grid OR remove it
 	Fix up humans.txt or remove it
-	Fix issue with normalize.css minification where two files are in the build directory
-	Review standards for commenting sections in .scss files
+	Update GA code
 	Test out install process
 	Review instructions for install
 	Write instructions for adding CSS libraries
@@ -15,12 +14,12 @@
 #Todo (v0.2):
 	Update README to include a description of each directory
 	Test sourcemaps in FireFox
-	Fix up sourcemaps paths
+	Fix up sourcemaps paths and document!
 	Properly comment Gruntfile.js
 
 #Todo (v0.3):
 	Research and choose license
-	Create branding and a basic supporting website
+	Think of a name
 	Move to Github as a public repo with read only access
 
 #Todo (v0.4):
