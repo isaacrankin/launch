@@ -1,1 +1,0 @@
-{"version":3,"file":"../../build/scripts/main.min.js","sources":["../scripts/models.js","../scripts/views.js","../scripts/main.js"],"names":["App","$","console","log","window","document","jQuery","_"],"mappings":"AAAA,YAEA,IAAIA,KAAMA,QCANA,IAAMA,OCAVC,GAAE,WAEDC,QAAQC,IAAI,mBAIXC,OAAQC,SAAUC,OAAQC","sourceRoot":"../../../src/config/"}
