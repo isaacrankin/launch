@@ -3,34 +3,13 @@ module.exports = function(grunt) {
 	// Load all grunt tasks automatically
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	var workingPath = "../",
-		outputPath = "../../build/",
-		vendorPath = "../vendor/";
-
-	var config = {
-		workingPath: workingPath,
-		outputPath: outputPath,
-		vendorPath: vendorPath,
-		vendorFiles: {
-			styles: [vendorPath+"normalize-css/normalize.css"],
-			scripts: [vendorPath+"jquery/jquery.min.js",
-					vendorPath+"underscore/underscore-min.js",
-					vendorPath+"/backbone/backbone-min.js",
-					vendorPath+"/scripts/plugins.js"]
-		},
-		workingFiles: {
-			scripts: [workingPath+"scripts/models.js",
-					workingPath+"scripts/views.js",
-					workingPath+"scripts/main.js"]
-		}
-	}
-
 	grunt.initConfig({
-
-		config: config,
 
 		// Import package manifest
 		pkg: grunt.file.readJSON("package.json"),
+
+		// Import build config
+		config: grunt.file.readJSON("Gruntconfig.json"),
 
 		// Banner definitions
 		meta: {
@@ -99,17 +78,19 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: true,
 						src: ['<%= config.vendorPath %>normalize-css/normalize.css'],
-						dest: '<%= config.outputPath %>styles/vendor/'}
+						dest: '<%= config.outputPath %>styles/vendor/'
+					}
 				]
 			}
 		},
 
+		// Optional task for conactinating scripts
 		concat: {
 			dist: {
 				src: '<%= config.workingFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/main.js'
 			},
-			lib: {
+			vendor: {
 				src: '<%= config.vendorFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/lib.min.js'
 			}
@@ -128,7 +109,11 @@ module.exports = function(grunt) {
 		uglify: {
 			vendor: {
 				files: {
-					'<%= config.outputPath %>scripts/lib.min.js': '<%= config.vendorFiles.scripts %>',
+					'<%= config.outputPath %>scripts/lib.min.js': '<%= config.vendorFiles.scripts %>'
+				}
+			},
+			modernizr: {
+				files: {
 					'<%= config.outputPath %>scripts/vendor/modernizr.min.js': '<%= config.vendorPath %>modernizr/modernizr.js'
 				}
 			},
@@ -184,8 +169,9 @@ module.exports = function(grunt) {
 			'compass',
 			'copy',
 			'cssmin',
-			'uglify:main', // concatinate and minify working JS
-			'uglify:vendor' // concatinate and minify vendor JS libraries, use this if libraries are not minified
+			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
+			'uglify:main', 		// concatinate and minify working JS
+			'concat:vendor' 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
 		]
 	);
 

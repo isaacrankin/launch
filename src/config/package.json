@@ -2,7 +2,7 @@
   "name": "FrontendBoilerplate",
   "title": "Frontend Boilerplate",
   "description": "A basic starting point for front-end projects.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt"
@@ -18,7 +18,7 @@
       "url": "http://isaacrankin.com"
     }
   ],
-  "license": "BSD",
+  "license": "BSD",  
   "devDependencies": {
     "grunt-contrib-compass": "~0.2.0",
     "grunt-peon-gui": "~0.3.0",
