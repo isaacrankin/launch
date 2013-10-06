@@ -2,6 +2,8 @@
 
 $(function(window, document, $, _){
 
+
+
 	console.log("Go application");
 
 

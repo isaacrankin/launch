@@ -3,5 +3,5 @@ build/scripts/*.js
 build/styles/*.css
 build/styles/vendor/*.css
 build/scripts/vendor/*.js
-build/scripts/sourcemaps/*
+build/scripts/sourcemaps/*.map
 build/images/*.png*
