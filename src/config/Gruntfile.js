@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 
 		// Optional task for conactinating scripts
 		concat: {
-			dist: {
+			working: {
 				src: '<%= config.workingFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/main.js'
 			},
@@ -123,8 +123,8 @@ module.exports = function(grunt) {
 				},
 				options:{
 					sourceMappingURL: "sourcemaps/main.map",
-					sourceMap: "../../build/scripts/sourcemaps/main.map",
-					sourceMapRoot: "../../../src/config/"
+					sourceMap: "<%= config.outputPath %>scripts/sourcemaps/main.map",
+					sourceMapRoot: "<%= config.sourceMapRoot %>"
 				}
 			}
 		},

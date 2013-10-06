@@ -2,6 +2,7 @@
   "workingPath": "../",
   "outputPath": "../../build/",
   "vendorPath": "../vendor/",
+  "sourceMapRoot": "../../../src/config/",
   "vendorFiles": {
     "styles": ["../vendor/normalize-css/normalize.css"],
     "scripts": ["../vendor/jquery/jquery.min.js",
