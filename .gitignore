@@ -5,3 +5,6 @@ build/styles/vendor/*.css
 build/scripts/vendor/*.js
 build/scripts/sourcemaps/*.map
 build/images/*.png*
+build/images/*.jpg*
+build/images/*.jpeg*
+build/images/*.gif*
