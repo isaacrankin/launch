@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 						cwd: '<%= config.outputPath %>images/',
 						src: ['**/*.png'],
 						// Could also match cwd line above. i.e. project-directory/img/
-						dest: '<%= config.outputPath %>images/',
+						dest: '<%= config.outputPath %>images/optimized/',
 						ext: '.png'
 					}
 				]
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 						// Set to true to enable the following options…
 						expand: true,
 						// cwd is 'current working directory'
-						cwd: '<%= config.outputPath %>images/',
+						cwd: '<%= config.workingPath %>images/',
 						src: ['**/*.jpg'],
 						// Could also match cwd. i.e. project-directory/img/
 						dest: '<%= config.outputPath %>images/',

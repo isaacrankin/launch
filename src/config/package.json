@@ -18,7 +18,7 @@
       "url": "http://isaacrankin.com"
     }
   ],
-  "license": "BSD",  
+  "license": "BSD",
   "devDependencies": {
     "grunt-contrib-compass": "~0.2.0",
     "grunt-peon-gui": "~0.3.0",
@@ -30,6 +30,7 @@
     "grunt-notify": "~0.2.13",
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt": "~0.4.1",
-    "grunt-contrib-imagemin": "~0.3.0"
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-imageoptim": "~1.3.13"
   }
 }

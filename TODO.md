@@ -4,9 +4,10 @@
 	Test out responsive media queries
 	Either fix up SCSS grid OR remove it
 	Update GA code
+	Test out how to move/seperate the build and src directories 
 
 #Todo (v0.2):
-	Update README to include a description of each directory
+	Create documentation which contains a description of each directory
 	Test sourcemaps in FireFox
 	Fix up sourcemaps paths and document!
 	Properly comment Gruntfile.js
