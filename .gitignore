@@ -8,3 +8,4 @@ build/images/*.png*
 build/images/*.jpg*
 build/images/*.jpeg*
 build/images/*.gif*
+build/scripts/src/

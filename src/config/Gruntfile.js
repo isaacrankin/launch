@@ -79,12 +79,20 @@ module.exports = function(grunt) {
 						flatten: true,
 						src: ['<%= config.vendorPath %>normalize-css/normalize.css'],
 						dest: '<%= config.outputPath %>styles/vendor/'
+					},
+
+					// Copy over working scripts, referenced by sourcemaps
+					{
+						expand: true,
+						cwd: '<%= config.workingPath %>scripts/',
+						src: ['**'],
+						dest: '<%= config.outputPath %>scripts/src/'
 					}
 				]
 			}
 		},
 
-		// Optional task for conactinating scripts
+		// Optional task for concatinating scripts
 		concat: {
 			working: {
 				src: '<%= config.workingFiles.scripts %>',
@@ -121,9 +129,10 @@ module.exports = function(grunt) {
 					'<%= config.outputPath %>scripts/main.min.js': '<%= config.workingFiles.scripts %>'
 				},
 				options:{
-					sourceMappingURL: "sourcemaps/main.map",
-					sourceMap: "<%= config.outputPath %>scripts/sourcemaps/main.map",
-					sourceMapRoot: "<%= config.sourceMapRoot %>"
+					sourceMappingURL: "main.map",
+					sourceMap: "<%= config.outputPath %>scripts/main.map",
+					sourceMapRoot: "src/",
+					sourceMapPrefix: 2
 				}
 			}
 		},
@@ -166,7 +175,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default',
 		[
 			'compass',
-			'copy',
+			'copy:main',
 			'cssmin',
 			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
 			'uglify:main', 		// concatinate and minify working JS
