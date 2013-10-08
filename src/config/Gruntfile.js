@@ -79,12 +79,16 @@ module.exports = function(grunt) {
 						flatten: true,
 						src: ['<%= config.vendorPath %>normalize-css/normalize.css'],
 						dest: '<%= config.outputPath %>styles/vendor/'
-					},
+					}
+				]
+			},
 
-					// Copy over working scripts, referenced by sourcemaps
+			// Copy over working scripts, referenced by sourcemaps
+			scripts: {
+				files: [
 					{
 						expand: true,
-						cwd: '<%= config.workingPath %>scripts/',
+							cwd: '<%= config.workingPath %>scripts/',
 						src: ['**'],
 						dest: '<%= config.outputPath %>scripts/src/'
 					}
@@ -140,7 +144,7 @@ module.exports = function(grunt) {
 		watch: {
 			src: {
 				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>sass/**/*.*'],
-				tasks: ['compass', 'uglify:main', 'notify:watch_all']
+				tasks: ['compass', 'copy:scripts', 'uglify:main', 'notify:watch_all']
 			},
 			css: {
 				files: ['<%= config.workingPath %>sass/{,*/}*.{scss,sass}'],
@@ -148,7 +152,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
-				tasks: ['uglify:main', 'notify:watch_scripts']
+				tasks: ['copy:scripts', 'uglify:main', 'notify:watch_scripts']
 			}
 		},
 
@@ -176,6 +180,7 @@ module.exports = function(grunt) {
 		[
 			'compass',
 			'copy:main',
+			'copy:scripts',
 			'cssmin',
 			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
 			'uglify:main', 		// concatinate and minify working JS
