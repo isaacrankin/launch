@@ -1,9 +1,10 @@
 #Installation & Usage
 
 Before starting, check you have all the dependencies installed (listed below).
-After cloning the repo...
 
-1. Open config directory
+After cloning the repo follow the steps below.
+
+1. Open the config directory
 
 		cd src/config
 
@@ -37,7 +38,7 @@ After cloning the repo...
 ####Notes
 If you add another vendor library you'll need to run `grunt`.
 
-To commit the compiled state to git, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
+To commit the compiled state, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
 
 *****
 
@@ -53,9 +54,9 @@ Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` ob
 2. Update `src/config/Gruntconfig.json` to include the new library, add it to `vendorFiles`
 3. Re-compile with `grunt`
 
-If there is no [bower component](http://sindresorhus.com/bower-components/), add the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
+If there is no [bower component](http://sindresorhus.com/bower-components/), copy the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
 
-If you don't want the library to be compiled just add the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
+If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
 
 *****
 
@@ -75,6 +76,6 @@ Update `src/config/package.json` with your project details. Only the edit `devDe
 *****
 
 #Resources
-* [Browse Bower components](http://sindresorhus.com/bower-components/)
+* [Available Bower components](http://sindresorhus.com/bower-components/)
 * [Using strict mode in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 * [Source Maps in JavaScript](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
