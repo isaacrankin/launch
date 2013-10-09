@@ -2,8 +2,6 @@
 
 Before starting, check you have all the dependencies installed (listed below).
 
-After cloning the repo follow the steps below.
-
 1. Open the config directory
 
 		cd src/config
