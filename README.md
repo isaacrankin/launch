@@ -1,6 +1,7 @@
 #Installation & Usage
 
-Before starting, be sure to check you have all the dependencies installed (listed below).
+Before starting, check you have all the dependencies installed (listed below).
+After cloning the repo...
 
 1. Open config directory
 
@@ -18,7 +19,7 @@ Before starting, be sure to check you have all the dependencies installed (liste
 
 		grunt
 
-5. Watch for file changes with Grunt
+5. Watch for file changes with Grunt using one of following tasks
 
 	Changes to working SCSS and JS files: 
 
@@ -34,27 +35,27 @@ Before starting, be sure to check you have all the dependencies installed (liste
 
 
 ####Notes
-If you add another vendor library you need to run <code>grunt</code> again.
+If you add another vendor library you'll need to run `grunt`.
 
 To commit the compiled state to git, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
 
 *****
 
-#Adding Working JS files
+#Add Working JS files
 
-Edit `src/config/Gruntconfig.json`, add your scripts to `workingFiles`, they are compiled in this same order.
+Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` object, they are compiled in the same order.
 
 *****
 
-#Adding New Vendor Libraries/Packages
+#Add New Vendor Libraries/Packages
 
-1. Add the name and version to `scr/config/bower.json` and run <code>bower install</code>. 
-2. Update `src/config/Gruntconfig.json` to include the new library, add it to <code>vendorFiles</code>
-3. Re-compile with <code>grunt</code>
+1. Add the name and version to `scr/config/bower.json` and run `bower install`.
+2. Update `src/config/Gruntconfig.json` to include the new library, add it to `vendorFiles`
+3. Re-compile with `grunt`
 
 If there is no [bower component](http://sindresorhus.com/bower-components/), add the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
 
-If you don't want the library to be compiled just add the files directly to `build/scripts/vendor/` or `builds/styles/vendor/`.
+If you don't want the library to be compiled just add the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
 
 *****
 
