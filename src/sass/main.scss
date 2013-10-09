@@ -1,4 +1,4 @@
-// Combines all styles, ready to be output into a single CSS file.
+// Combine all styles, ready to be output into a single CSS file.
 
 // Libraries
 @import "compass/css3";
@@ -6,7 +6,9 @@
 // Settings
 $layout-breakpoint-tablet:768px;
 $layout-breakpoint-desktop:1024px;
-$layout-grid-gutter:20px;
+
+$grid-total-columns:12;
+$grid-gutter:15px;
 
 // Colours
 $colour-brand-primary:#F00;

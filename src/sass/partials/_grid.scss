@@ -1,8 +1,5 @@
 // Base grid
 // --------------------------------------------------------------------
-$grid-total-columns:12;
-$grid-gutter:15px;
-
 .row{
 	width:100%;
 	clear:both;
@@ -26,9 +23,7 @@ $grid-gutter:15px;
 
 // Creating column classes
 @for $i from 1 through $grid-total-columns {
-	.row {
-		.col-#{$i} {
-			width: percentage(($i / $grid-total-columns));
-		}
+	.row .col-#{$i} {
+		width: percentage(($i / $grid-total-columns));
 	}
 }

@@ -4,16 +4,37 @@ html.touch{
 
 }
 
-// "Tablet" specific styles
-// --------------------------------------------------------------------
-@media only screen and (min-width: $layout-breakpoint-tablet) and (max-width: $layout-breakpoint-desktop) {
-
-}
-
 // "Desktop" specific styles
 // --------------------------------------------------------------------
 @media only screen and (min-width: $layout-breakpoint-desktop) {
 
+	// For example: Max width on content container
+	section[role="main"]{
+		max-width: 1200px;
+	}
+}
+
+// "Tablet" specific styles
+// --------------------------------------------------------------------
+@media only screen and (min-width: $layout-breakpoint-tablet) and (max-width: $layout-breakpoint-desktop) {
+
+	// For example: Make all col-3's 50%
+	.row .col-3{
+		width: 50%;
+	}
+}
+
+// "Mobile" specific styles
+// --------------------------------------------------------------------
+@media only screen and (max-width: $layout-breakpoint-tablet) {
+
+	// For example: Drop to single column layout
+	.row{
+		[class^="col-"],
+		[class*="col-"]{
+			width: 100%;
+		}
+	}
 }
 
 // Print styles
