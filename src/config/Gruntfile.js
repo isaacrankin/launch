@@ -144,7 +144,8 @@ module.exports = function(grunt) {
 		watch: {
 			src: {
 				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>sass/**/*.*'],
-				tasks: ['compass', 'copy:scripts', 'uglify:main', 'notify:watch_all']
+				tasks: ['compass', 'copy:scripts', 'uglify:main', 'notify:watch_all'],
+				livereload: true
 			},
 			css: {
 				files: ['<%= config.workingPath %>sass/{,*/}*.{scss,sass}'],
