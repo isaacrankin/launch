@@ -9,3 +9,5 @@ build/images/*.jpg*
 build/images/*.jpeg*
 build/images/*.gif*
 build/scripts/src/
+*.sublime-workspace
+*.sublime-project

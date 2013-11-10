@@ -1,23 +1,17 @@
 {
-  "name": "FrontendBoilerplate",
-  "title": "Frontend Boilerplate",
-  "description": "A basic starting point for front-end projects.",
-  "version": "0.1.0",
+  "name": "Blueprint",
+  "title": "Blueprint",
+  "description": "An opinionated front-end boilerplate.",
+  "version": "0.2.0",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt"
   },
-  "repository": "https://bitbucket.org/isaacwebfix/frontend-boilerplate",
+  "repository": "https://github.com/isaacwebfix/blueprint",
   "author": {
     "name": "Isaac Rankin",
     "url": "http://isaacrankin.com"
   },
-  "maintainers": [
-    {
-      "name": "Isaac Rankin",
-      "url": "http://isaacrankin.com"
-    }
-  ],
   "license": "BSD",
   "devDependencies": {
     "grunt-contrib-compass": "~0.2.0",

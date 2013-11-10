@@ -100,7 +100,7 @@ module.exports = function(grunt) {
 		concat: {
 			working: {
 				src: '<%= config.workingFiles.scripts %>',
-				dest: '<%= config.outputPath %>scripts/main.js'
+				dest: '<%= config.outputPath %>scripts/main.min.js'
 			},
 			vendor: {
 				src: '<%= config.vendorFiles.scripts %>',
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// Default task(s).
+	// Default task(s) for production
 	grunt.registerTask('default',
 		[
 			'compass',
@@ -186,6 +186,17 @@ module.exports = function(grunt) {
 			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
 			'uglify:main', 		// concatinate and minify working JS
 			'concat:vendor' 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+		]
+	);
+
+	// Development build
+	// Does NOT compile vendor libraries or minify CSS
+	grunt.registerTask('dev',
+		[
+			'compass',
+			'copy:main',
+			'copy:scripts',
+			'concat:working' // concatinate and minify working JS
 		]
 	);
 

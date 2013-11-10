@@ -20,7 +20,7 @@ Before starting, check you have all the dependencies installed (listed below).
 
 5. Watch for file changes with Grunt using one of following tasks
 
-	Changes to working SCSS and JS files: 
+	Changes to working SCSS and JS files:
 
 		grunt watch-all
 
@@ -38,13 +38,10 @@ If you add another vendor library you'll need to run `grunt`.
 
 To commit the compiled state, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
 
-*****
 
 #Add Working JS files
 
 Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` object, they are compiled in the same order.
-
-*****
 
 #Add New Vendor Libraries/Packages
 
@@ -56,12 +53,9 @@ If there is no [bower component](http://sindresorhus.com/bower-components/), cop
 
 If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
 
-*****
-
 #Customise your project
 Update `src/config/package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/config/Gruntfile.js`.
 
-*****
 
 #Dependencies
 
@@ -71,7 +65,6 @@ Update `src/config/package.json` with your project details. Only the edit `devDe
 * [Sass](http://sass-lang.com/)
 * [Compass](http://compass-style.org/)
 
-*****
 
 #Resources
 * [Available Bower components](http://sindresorhus.com/bower-components/)
