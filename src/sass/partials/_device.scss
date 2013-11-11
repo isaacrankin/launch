@@ -9,7 +9,7 @@ html.touch{
 @media only screen and (min-width: $layout-breakpoint-desktop) {
 
 	// For example: Max width on content container
-	section[role="main"]{
+	main{
 		max-width: 1200px;
 	}
 }

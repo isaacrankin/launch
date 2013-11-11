@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-    <title>Style Guide</title>
+	<title>Style Guide</title>
 	<link rel="stylesheet" href="styles/vendor/normalize.css"/>
 	<link rel="stylesheet" href="styles/main.css"/>
 	<script src="scripts/vendor/modernizr.min.js" type="text/javascript"></script>
@@ -26,7 +26,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-	<section role="main">
+	<main role="main">
 
 		<article>
 			<div class="row">
@@ -41,8 +41,12 @@
 					<h5>This is 5th level heading</h5>
 					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
 					<h6>This is 6th level heading</h6>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
+					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam <a href="#" title="anchor link">anchor link</a> quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
 					<img src="http://3.bp.blogspot.com/-AuyU2lDYYxM/UM-oy0maaDI/AAAAAAAAAPc/QO2tlRCGvhU/s1600/IMG_0204.jpg" alt="New Chums" width="1000" height="666">
+					<h3>Example blockquote</h3>
+					<blockquote cite="http://developer.mozilla.org">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, harum, aliquid, odio, optio in cumque officiis nobis mollitia repellendus omnis enim autem sunt maiores sint consectetur eaque tempora. Mollitia, placeat!</p>
+					</blockquote>
 				</div>
 			</div>
 		</article>
@@ -240,7 +244,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-6">
+				<div class="col-4">
 					<ul>
 						<li>List item text</li>
 						<li>List item text</li>
@@ -254,7 +258,7 @@
 						<li>List item text</li>
 					</ul>
 				</div>
-				<div class="col-6">
+				<div class="col-4">
 					<ol>
 						<li>List item text</li>
 						<li>List item text</li>
@@ -266,6 +270,19 @@
 						<li>List item text</li>
 						<li>List item text</li>
 						<li>List item text</li>
+					</ol>
+				</div>
+				<div class="col-4">
+					<ol>
+						<li>first item</li>
+						<li>second item
+							<ol>
+								<li>second item first subitem</li>
+								<li>second item second subitem</li>
+								<li>second item third subitem</li>
+							</ol>
+						</li>
+						<li>third item</li>
 					</ol>
 				</div>
 			</div>
@@ -304,7 +321,7 @@
 			</div>
 		</article>
 
-	</section>
+	</main>
 	<script src="scripts/lib.min.js" type="text/javascript"></script>
 	<script src="scripts/main.min.js" type="text/javascript"></script>
 </body>
