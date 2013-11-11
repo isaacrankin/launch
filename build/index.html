@@ -93,40 +93,103 @@
 				<div class="col-12">
 					<h2>Forms</h2>
 					<form action="" method="POST" autocomplete="on" enctype="">
-						<legend>Example form</legend>
 						<fieldset>
+							<legend>Common Inputs</legend>
 							<div class="row">
 								<label for="example-field">Example label</label>
 								<input id="example-field" type="text" name="example-field" placeholder="example text input">
+							</div>
+							<div class="row">
+								<label for="example-field-search">Example search label</label>
+								<input id="example-field-search" type="search" name="example-field-search" placeholder="example search input">
 							</div>
 							<div class="row">
 								<label for="example-field-email">Example email label</label>
 								<input id="example-field-email" type="email" name="example-field-email" placeholder="example email input">
 							</div>
 							<div class="row">
-								<label for="example-field-url">Example url label</label>
-								<input id="example-field-url" type="url" name="example-field-url" placeholder="example url input">
+								<label for="example-field-password">Example password label</label>
+								<input id="example-field-password" type="password" name="example-field-password" required>
 							</div>
 							<div class="row">
 								<label for="example-field-url">Example url label</label>
 								<input id="example-field-url" type="url" name="example-field-url" placeholder="example url input">
 							</div>
+							<div class="row">
+								<label for="example-field-number">Example number label</label>
+								<input id="example-field-number" type="number" name="example-field-number" min="0" max="12" step="2" value="3" placeholder="5">
+							</div>
+							<div class="row">
+								<label for="example-field-range">Example range label</label>
+								<input id="example-field-range" type="range" name="example-field-range" min="0" max="12" step="2" value="3" placeholder="5">
+							</div>
+							<div class="row">
+								<textarea name="example-field-textarea" id="example-field-textarea" cols="30" rows="10" placeholder="Example textarea"></textarea>
+							</div>
+							<div class="row">
+								<select name="example-select" id="example-select">
+									<option value="one">Option one</option>
+									<option value="two">Option two</option>
+									<option value="three">Option three</option>
+									<option value="four">Option four</option>
+									<option value="five">Option five</option>
+									<option value="six">Option six</option>
+								</select>
+							</div>
+							<div class="row">
+								<label for="example-field-checkbox">Checkbox label</label>
+								<input id="example-field-checkbox" type="checkbox" name="example-field-checkbox" value="">
+								<label for="example-field-checkbox-two">Checkbox label</label>
+								<input id="example-field-checkbox-two" type="checkbox" name="example-field-checkbox-two" value="">
+								<label for="example-field-checkbox-three">Checkbox label</label>
+								<input id="example-field-checkbox-three" type="checkbox" name="example-field-checkbox-three" value="">
+							</div>
+							<div class="row">
+								<label for="example-field-radio">Radio label</label>
+								<input id="example-field-radio" type="radio" name="example-field-radio" value="">
+								<label for="example-field-radio-two">Radio label</label>
+								<input id="example-field-radio-two" type="radio" name="example-field-radio" value="">
+								<label for="example-field-radio-three">Radio label</label>
+								<input id="example-field-radio-three" type="radio" name="example-field-radio" value="">
+							</div>
+							<div class="row">
+								<label for="example-field-file">Example field file</label>
+								<input name="example-field-file" type="file">
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Time Inputs</legend>
+							<div class="row">
+								<label for="example-field-date">Example date label</label>
+								<input id="example-field-date" type="date" name="example-field-date">
+							</div>
+							<div class="row">
+								<label for="example-field-datetime">Example datetime label</label>
+								<input id="example-field-datetime" type="datetime" name="example-field-datetime">
+							</div>
+							<div class="row">
+								<label for="example-field-datetime-local">Example date-time-local label</label>
+								<input id="example-field-datetime-local" type="datetime-local" name="example-field-datetime-local">
+							</div>
+							<div class="row">
+								<label for="example-field-month">Example month label</label>
+								<input id="example-field-month" type="month" name="example-field-month">
+							</div>
+							<div class="row">
+								<label for="example-field-time">Example time label</label>
+								<input id="example-field-time-local" type="time" name="example-field-time-">
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Less Common Inputs</legend>
 							<div class="row">
 								<label for="example-field-color">Example color label</label>
 								<input id="example-field-color" type="color" name="example-field-color" placeholder="example color input">
 							</div>
 							<div class="row">
-								<label for="example-field-date">Example date label</label>
-								<input id="example-field-date" type="date" name="example-field-date" placeholder="example date input">
+								<label for="example-field-range">Example range label</label>
+								<input id="example-field-range" type="range" name="example-field-range">
 							</div>
-							<div class="row">
-								<label for="example-field-date-time">Example date-time label</label>
-								<input id="example-field-date-time" type="date-time" name="example-field-date-time" placeholder="example date-time input">
-							</div>
-							<textarea name="example-field-textarea" id="example-field-textarea" cols="30" rows="10" placeholder="Example textarea"></textarea>
-						</fieldset>
-						<fieldset>
-
 						</fieldset>
 						<input type="submit" value="submit">
 					</form>
@@ -138,6 +201,34 @@
 			<div class="row">
 				<div class="col-12">
 					<h2>Tables</h2>
+					<table cellpadding="10" cellspacing="5">
+						<tbody>
+							<tr>
+								<th>Column 1</th>
+								<th>Column 2</th>
+								<th>Column 3</th>
+								<th>Column 4</th>
+							</tr>
+							<tr>
+								<td>Cell content one</td>
+								<td>Cell content two</td>
+								<td>Cell content three</td>
+								<td>Cell content four</td>
+							</tr>
+							<tr>
+								<td>Cell content one</td>
+								<td>Cell content two</td>
+								<td>Cell content three</td>
+								<td>Cell content four</td>
+							</tr>
+							<tr>
+								<td>Cell content one</td>
+								<td>Cell content two</td>
+								<td>Cell content three</td>
+								<td>Cell content four</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</article>
@@ -148,14 +239,42 @@
 					<h2>Lists</h2>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-6">
+					<ul>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+					</ul>
+				</div>
+				<div class="col-6">
+					<ol>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+						<li>List item text</li>
+					</ol>
+				</div>
+			</div>
 		</article>
 
 		<article>
 			<div class="row">
 				<div class="col-12">
 					<h2>Custom Widgets &amp; Buttons</h2>
-					<button name="button">Click me</button>
-					<button name="button">Click me</button>
 					<button name="button">Click me</button>
 				</div>
 			</div>
