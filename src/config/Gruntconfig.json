@@ -1,17 +1,17 @@
 {
-  "workingPath": "../",
-  "outputPath": "../../build/",
-  "vendorPath": "../vendor/",
-  "vendorFiles": {
-    "styles": ["../vendor/normalize-css/normalize.css"],
-    "scripts": ["../vendor/jquery/jquery.min.js",
-        "../vendor/underscore/underscore-min.js",
-        "../vendor/backbone/backbone-min.js",
-        "../vendor/scripts/plugins.js"]
-  },
-  "workingFiles": {
-    "scripts": ["../scripts/models.js",
-                "../scripts/views.js",
-                "../scripts/main.js"]
-  }
+	"workingPath": "../",
+	"outputPath": "../../build/",
+	"vendorPath": "../vendor/",
+	"vendorFiles": {
+		"styles": ["../vendor/normalize-css/normalize.css"],
+		"scripts": ["../vendor/jquery/jquery.min.js",
+			"../vendor/underscore/underscore-min.js",
+			"../vendor/backbone/backbone-min.js",
+			"../vendor/scripts/plugins.js"]
+	},
+	"workingFiles": {
+		"scripts": ["../scripts/models.js",
+			"../scripts/views.js",
+			"../scripts/main.js"]
+	}
 }

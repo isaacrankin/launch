@@ -23,6 +23,15 @@ module.exports = function(grunt) {
 				" */\n"
 		},
 
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			all: [
+				'<%= config.workingFiles.scripts %>'
+			]
+		},
+
 		imagemin: {
 			png: {
 				options: {
@@ -179,6 +188,7 @@ module.exports = function(grunt) {
 	// Default task(s) for production
 	grunt.registerTask('default',
 		[
+			'jshint',
 			'compass',
 			'copy:main',
 			'copy:scripts',
@@ -193,6 +203,7 @@ module.exports = function(grunt) {
 	// Does NOT compile vendor libraries or minify CSS
 	grunt.registerTask('dev',
 		[
+			'jshint',
 			'compass',
 			'copy:main',
 			'copy:scripts',
