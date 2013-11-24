@@ -1,9 +1,7 @@
-"use strict";
+/*global $:false, jQuery:false, _:false */
 
-$(function(window, document, $, _){
+'use strict';
 
-
-	console.log("Go application");
-
-
-}(window, document, jQuery, _));
+$(function (window, document, $, _) {
+	console.log('Go applicaiton');
+})(window, document, jQuery, _);

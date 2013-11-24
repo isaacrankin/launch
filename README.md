@@ -70,3 +70,4 @@ Update `src/config/package.json` with your project details. Only the edit `devDe
 * [Available Bower components](http://sindresorhus.com/bower-components/)
 * [Using strict mode in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 * [Source Maps in JavaScript](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+* [JSHint Documentation](http://jshint.com/docs/)
