@@ -13,10 +13,15 @@ $grid-gutter:1em;
 // Colours
 $colour-brand-primary:#F00;
 $colour-brand-secondary:#0F0;
+$colour-font-primary: #444;
+$colour-font-secondary: #CCC;
+
+// Mixins
+@mixin example(){
+}
 
 // General styles
-@import "partials/typography";
-@import "partials/form";
+@import "partials/base";
 @import "partials/grid";
 @import "partials/elements";
 

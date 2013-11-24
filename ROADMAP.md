@@ -1,13 +1,16 @@
 #Todo
 
 ## v0.1:
-	Add livereload
+	Finish style guide template
 
 ## v0.2:
 	Create documentation which contains a description of each directory
+	Document the intended method for writing SCSS
 	Properly comment Gruntfile.js
 	Test out imagemin task - src images dir to match builds dir
 
-## v1:
-	Create a one line install with NPM or ?
-	Introduce JS framework &/or standards?
+## v0.3:
+
+## v2:
+	Create a one line install with NPM
+	Introduce JS framework &/or standards
