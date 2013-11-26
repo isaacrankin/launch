@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON("package.json"),
 
 		// Import build config
-		config: grunt.file.readJSON("Gruntconfig.json"),
+		config: grunt.file.readJSON("config.json"),
 
 		// Banner definitions
 		meta: {
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 				options: {
 					environment: 'production',
 					cssDir: '<%= config.outputPath %>styles',
-					sassDir: '<%= config.workingPath %>sass',
+					sassDir: '<%= config.workingPath %>styles',
 					outputStyle: "compressed"
 				}
 			}
@@ -152,12 +152,12 @@ module.exports = function(grunt) {
 
 		watch: {
 			src: {
-				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>sass/**/*.*'],
+				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>styles/**/*.*'],
 				tasks: ['compass', 'copy:scripts', 'uglify:main', 'notify:watch_all'],
 				livereload: true
 			},
 			css: {
-				files: ['<%= config.workingPath %>sass/{,*/}*.{scss,sass}'],
+				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
 				tasks: ['compass', 'notify:watch_styles']
 			},
 			js: {
