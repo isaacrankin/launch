@@ -1,8 +1,5 @@
 #Roadmap
 
-## v0.1:
-	Finish style guide template
-
 ## v0.2:
 	Create documentation which contains a description of each directory
 	Document the intended method for writing SCSS
