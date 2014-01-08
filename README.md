@@ -1,5 +1,3 @@
-#Blueprint
-
 Blueprint is a simple and opinionated front-end boilerplate.
 
 It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
