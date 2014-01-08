@@ -1,3 +1,10 @@
+#Blueprint
+
+Blueprint is a simple and opinionated front-end boilerplate.
+
+It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
+By amalgamating existing frameworks, plugins, ideas from other boilerplates and making decisions about structure, Blueprint is intended to save time.
+
 #Installation & Usage
 
 Before starting, check you have all the dependencies installed (listed below).
