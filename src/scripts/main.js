@@ -15,7 +15,7 @@
 	 */
 
 	$(function(){
-		console.log('Init application');
+		console.log('Initialise application');
 	});
 
 })(window, document, jQuery, Backbone, _);

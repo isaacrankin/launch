@@ -1,4 +1,8 @@
+# Editor files
 .idea/
+*.sublime-workspace
+*.sublime-project
+
 build/scripts/*.js
 build/styles/*.css
 build/styles/vendor/*.css
@@ -9,5 +13,3 @@ build/images/*.jpg*
 build/images/*.jpeg*
 build/images/*.gif*
 build/scripts/src/
-*.sublime-workspace
-*.sublime-project
