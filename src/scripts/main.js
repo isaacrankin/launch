@@ -2,6 +2,11 @@
 
 'use strict';
 
-$(function (window, document, $, _) {
-	console.log('Go applicaiton');
+(function (window, document, $, _) {
+
+
+	$(function(){
+		console.log('Init application')
+	});
+
 })(window, document, jQuery, _);
