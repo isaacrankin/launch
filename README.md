@@ -1,8 +1,8 @@
-Blueprint is a simple and opinionated front-end boilerplate.
+# [Blueprint](https://github.com/isaacwebfix/blueprint/)
 
-It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
+Blueprint is a simple and opinionated front-end boilerplate. It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
 
-#Features & Integrated Technologies
+##Features & Integrated Technologies
 
 -   A GruntJS build
 -   Bower for package management
@@ -20,7 +20,7 @@ It aims to be flexible enough to integrate with server side frameworks and to sc
 -   Includes the build state and does not compile HTML
 -   Easily customizable
 
-#Installation & Usage
+##Installation & Usage
 
 Before starting, check you have all the dependencies installed (listed below).
 
@@ -61,7 +61,7 @@ If you add another vendor library you'll need to run `grunt`.
 To commit the compiled state, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
 
 
-#Add Working JS files
+##Add Working JS files
 
 Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` object, they are compiled in the same order.
 
@@ -75,11 +75,11 @@ If there is no [bower component](http://sindresorhus.com/bower-components/), cop
 
 If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
 
-#Customise your project
+##Customise your project
 Update `src/config/package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/config/Gruntfile.js`.
 
 
-#Dependencies
+##Dependencies
 
 * [Node.js](http://nodejs.org/)
 * [Bower](http://bower.io/)
@@ -88,7 +88,7 @@ Update `src/config/package.json` with your project details. Only the edit `devDe
 * [Compass](http://compass-style.org/)
 
 
-#Resources
+##Resources
 * [Available Bower components](http://sindresorhus.com/bower-components/)
 * [Using strict mode in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 * [Source Maps in JavaScript](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
