@@ -1,8 +1,5 @@
 #Roadmap
 
-## 0.1.1:
-	Add a basic feature list to the README
-
 ## v0.2:
 	Improve performance of Grunt build
 	Consider removing Compass to reduce dependencies and improve performance

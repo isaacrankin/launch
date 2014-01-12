@@ -2,6 +2,24 @@ Blueprint is a simple and opinionated front-end boilerplate.
 
 It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
 
+#Features & Integrated Technologies
+
+-   A GruntJS build
+-   Bower for package management
+-   JavaScript
+	-   Backbone.js
+	-   Underscore.js
+	-   jQuery
+	-   Modernizr
+-   JavaScript sourcemaps for debugging
+-   SCSS & Compass
+-   normalize.css
+-   A configurable base grid
+-   A methodology for for writing styles, with some examples
+-   HTML style guide markup
+-   Includes the build state and does not compile HTML
+-   Easily customizable
+
 #Installation & Usage
 
 Before starting, check you have all the dependencies installed (listed below).
