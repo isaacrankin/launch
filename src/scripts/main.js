@@ -1,12 +1,21 @@
-/*global $:false, jQuery:false, _:false */
+/*global $:false, jQuery:false, _:false, Backbone:false */
 
 'use strict';
 
-(function (window, document, $, _) {
+(function(window, document, $, Backbone, _) {
 
+	/*
+	 App configuration goes here, include things like:
+
+	 - Rest API urls
+	 - API keys, e.g FB App ID
+	 - Google Analytics code
+	 - Google map options
+	 - Environment specific values
+	 */
 
 	$(function(){
-		console.log('Init application')
+		console.log('Init application');
 	});
 
-})(window, document, jQuery, _);
+})(window, document, jQuery, Backbone, _);
