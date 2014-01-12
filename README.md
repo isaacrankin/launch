@@ -65,7 +65,7 @@ To commit the compiled state, delete the `.gitignore` file in the root directory
 
 Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` object, they are compiled in the same order.
 
-#Add New Vendor Libraries/Packages
+##Add New Vendor Libraries/Packages
 
 1. Add the name and version to `scr/config/bower.json` and run `bower install`.
 2. Update `src/config/Gruntconfig.json` to include the new library, add it to `vendorFiles`
