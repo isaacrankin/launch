@@ -1,8 +1,5 @@
 #Roadmap
 
-## v0.2:
-	Test out imagemin task - src images dir to match builds dir
-
 ## v0.3:
 	Document the intended method for writing SCSS
 
