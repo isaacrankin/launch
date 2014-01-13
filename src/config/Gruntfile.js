@@ -56,17 +56,17 @@ module.exports = function(grunt) {
 						// Set to true to enable the following options…
 						expand: true,
 						// cwd is 'current working directory'
-						cwd: '<%= config.outputPath %>images/',
+						cwd: '<%= config.workingPath %>images/',
 						src: ['**/*.png'],
 						// Could also match cwd line above. i.e. project-directory/img/
-						dest: '<%= config.outputPath %>images/optimized/',
+						dest: '<%= config.outputPath %>images/',
 						ext: '.png'
 					}
 				]
 			},
 			jpg: {
 				options: {
-					progressive: true
+					progressive: true,
 				},
 				files: [
 					{
@@ -207,6 +207,7 @@ module.exports = function(grunt) {
 			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
 			'uglify:main', 		// concatinate and minify working JS
 			'concat:vendor', 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+			'imagemin',
 			'usebanner'         // add meta banner to CSS and JS
 		]
 	);

@@ -1,8 +1,6 @@
 #Roadmap
 
 ## v0.2:
-	Improve performance of Grunt build
-	Consider removing Compass to reduce dependencies and improve performance
 	Test out imagemin task - src images dir to match builds dir
 
 ## v0.3:
