@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	// Load all grunt tasks automatically
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require('time-grunt')(grunt);
 
 	grunt.initConfig({
 
@@ -11,7 +12,7 @@ module.exports = function(grunt) {
 		// Import build config
 		config: grunt.file.readJSON("config.json"),
 
-		// Banner definitions
+		// Banner definition
 		meta: {
 			banner: "/*\n" +
 				" *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n" +
@@ -21,6 +22,19 @@ module.exports = function(grunt) {
 				" *  Made by <%= pkg.author.name %>\n" +
 				" *  Under <%= pkg.license %> License\n" +
 				" */\n"
+		},
+
+		usebanner: {
+			taskName: {
+				options: {
+					position: 'top' || 'bottom',
+					banner: '<%= meta.banner %>',
+					linebreak: true || false
+				},
+				files: {
+					src: [ '<%= config.outputPath %>scripts/main.min.js', '<%= config.outputPath %>styles/main.css' ]
+				}
+			}
 		},
 
 		jshint: {
@@ -72,7 +86,6 @@ module.exports = function(grunt) {
 		compass: {
 			dist: {
 				options: {
-					environment: 'production',
 					cssDir: '<%= config.outputPath %>styles',
 					sassDir: '<%= config.workingPath %>styles',
 					outputStyle: "compressed"
@@ -105,7 +118,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Optional task for concatinating scripts
 		concat: {
 			working: {
 				src: '<%= config.workingFiles.scripts %>',
@@ -153,8 +165,7 @@ module.exports = function(grunt) {
 		watch: {
 			src: {
 				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>styles/**/*.*'],
-				tasks: ['compass', 'copy:scripts', 'uglify:main', 'notify:watch_all'],
-				livereload: true
+				tasks: ['dev', 'notify:watch_src']
 			},
 			css: {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
@@ -162,52 +173,52 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
-				tasks: ['copy:scripts', 'uglify:main', 'notify:watch_scripts']
+				tasks: ['copy:scripts', 'concat:working', 'notify:watch_scripts']
 			}
 		},
 
 		notify: {
-			watch_all: {
+			watch_src: {
 				options: {
-					message: 'Compass and Uglify finished running.'
+					message: 'Finished compiling scripts and styles'
 				}
 			},
 			watch_styles: {
 				options: {
-					message: 'Compass finished running.'
+					message: 'Finished compiling styles'
 				}
 			},
 			watch_scripts: {
 				options: {
-					message: 'Uglify finished running.'
+					message: 'Finished compiling scripts'
 				}
 			}
 		}
 	});
 
-	// Default task(s) for production
+	// Default task for production
 	grunt.registerTask('default',
 		[
 			'jshint',
 			'compass',
 			'copy:main',
-			'copy:scripts',
-			'cssmin',
+			'copy:scripts',     // copy over working scripts, referenced by sourcemaps
+			'cssmin',           // minifies vendor CSS
 			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
 			'uglify:main', 		// concatinate and minify working JS
-			'concat:vendor' 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+			'concat:vendor', 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+			'usebanner'         // add meta banner to CSS and JS
 		]
 	);
 
 	// Development build
-	// Does NOT compile vendor libraries or minify CSS
+	// Does NOT compile vendor libraries or minify JS
 	grunt.registerTask('dev',
 		[
 			'jshint',
-			'compass',
-			'copy:main',
+			'compass:dist',
 			'copy:scripts',
-			'concat:working' // concatinate and minify working JS
+			'concat:working' // concatinate working JS
 		]
 	);
 

@@ -5,26 +5,30 @@
   "version": "0.1.2",
   "main": "Gruntfile.js",
   "scripts": {
-	"test": "grunt"
+    "test": "grunt"
   },
   "repository": "https://github.com/isaacwebfix/blueprint",
   "author": {
-	"name": "Isaac Rankin",
-	"url": "http://isaacrankin.com"
+    "name": "Isaac Rankin",
+    "url": "http://isaacrankin.com"
   },
   "license": "BSD",
   "devDependencies": {
-	"grunt-contrib-compass": "~0.2.0",
-	"grunt-peon-gui": "~0.3.0",
-	"grunt-contrib-copy": "~0.4.1",
-	"grunt-contrib-uglify": "~0.1.1",
-	"grunt-contrib-concat": "~0.1.2",
-	"grunt-contrib-watch": "~0.5.1",
-	"matchdep": "~0.1.1",
-	"grunt-notify": "~0.2.14",
-	"grunt-contrib-cssmin": "~0.6.1",
-	"grunt": "~0.4.1",
-	"grunt-contrib-imagemin": "~0.3.0",
-	"grunt-contrib-jshint": "~0.6.0"
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "matchdep": "~0.1.1",
+    "grunt-notify": "~0.2.14",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "jit-grunt": "~0.1.2",
+    "grunt-banner": "~0.2.0"
+  },
+  "dependencies": {
+    "time-grunt": "~0.2.7"
   }
 }
