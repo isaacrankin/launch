@@ -1,6 +1,6 @@
 {
   "name": "Blueprint",
-  "version": "0.1.2",
+  "version": "0.2",
   "dependencies": {
     "modernizr": "~2.7.1",
     "jquery": "~1.9.1",
