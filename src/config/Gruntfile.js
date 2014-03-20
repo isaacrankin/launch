@@ -39,7 +39,10 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
-				jshintrc: '.jshintrc'
+				jshintrc: '.jshintrc',
+				ignores: [
+					'<%= config.workingPath %>scripts/plugins.js'
+				]
 			},
 			all: [
 				'<%= config.workingFiles.scripts %>'
