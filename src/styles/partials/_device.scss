@@ -21,20 +21,12 @@ html.touch{
 // --------------------------------------------------------------------
 @media only screen and (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) {
 
-	// For example: Make all col-3's 50%
-	.row .col-3{
-		width: 50%;
-	}
 }
 
 // Large width screens
 // --------------------------------------------------------------------
 @media only screen and (min-width: $layout-breakpoint-large) {
 
-	// For example: Max width on content container
-	main{
-		max-width: 1200px;
-	}
 }
 
 // High resolution devices

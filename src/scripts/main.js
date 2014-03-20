@@ -1,4 +1,4 @@
-/*global $:false, jQuery:false, _:false, Backbone:false */
+/*global App:false, $:false, jQuery:false, _:false, Backbone:false */
 
 'use strict';
 
