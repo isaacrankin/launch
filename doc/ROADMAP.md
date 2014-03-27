@@ -1,7 +1,6 @@
 #Roadmap
 
-## v0.3:
-	Document the intended method for writing SCSS
+## v0.4:
 
-## v2:
+## v1:
 	Create a one line install with NPM

@@ -2,3 +2,8 @@
 *node_modules
 vendor/*
 *npm-debug.log
+
+images/*.png*
+images/*.jpg*
+images/*.jpeg*
+images/*.gif*
