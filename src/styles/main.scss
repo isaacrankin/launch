@@ -1,15 +1,19 @@
 // Libraries
 @import "compass/css3";
 
-// Layout & grid settings
-$layout-breakpoint-medium: 768px;
-$layout-breakpoint-large: 1024px;
+// Grid settings
 $grid-total-columns: 12;
 $grid-gutter: 1em;
+
+// Layout settings
+$layout-breakpoint-medium: 768px;
+$layout-breakpoint-large: 1024px;
 
 // Colours
 $colour-brand-primary: #F00;
 $colour-brand-secondary: #0F0;
+
+// Fonts
 $colour-font-primary: 'Arial';
 $colour-font-secondary: 'Times';
 
