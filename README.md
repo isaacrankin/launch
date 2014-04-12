@@ -25,20 +25,10 @@ Before starting, check you have all the dependencies installed (listed below).
 
 		grunt
 
-5. Watch for file changes with Grunt using one of following tasks
+5. Watch for file changes with Grunt.
+This only complies working JS and SCSS.
 
-	Changes to working SCSS and JS files:
-
-		grunt watch-all
-
-	Changes to working JS files:
-
-		grunt watch-scripts
-
-	Changes to SCSS files:
-
-		grunt watch-styles
-
+		grunt watch
 
 #####Notes
 If you add another vendor library you'll need to run `grunt`.

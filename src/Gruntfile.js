@@ -86,13 +86,18 @@ module.exports = function(grunt) {
 			}
 		},
 
-		compass: {
+		sass: {
+			options: {
+				style: 'compressed'
+			},
 			dist: {
-				options: {
-					cssDir: '<%= config.outputPath %>styles',
-					sassDir: '<%= config.workingPath %>styles',
-					outputStyle: "compressed"
-				}
+				files: [{
+					expand: true,
+					cwd: 'styles',
+					src: ['*.scss'],
+					dest: '<%= config.outputPath %>styles',
+					ext: '.css'
+				}]
 			}
 		},
 
@@ -166,26 +171,17 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			src: {
-				files: ['<%= config.workingPath %>scripts/*.js', '<%= config.workingPath %>styles/**/*.*'],
-				tasks: ['dev', 'notify:watch_src']
-			},
 			css: {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
-				tasks: ['compass', 'notify:watch_styles']
+				tasks: ['sass', 'notify:watch_styles']
 			},
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
-				tasks: ['copy:scripts', 'concat:working', 'notify:watch_scripts']
+				tasks: ['jshint', 'copy:scripts', 'concat:working', 'notify:watch_scripts']
 			}
 		},
 
 		notify: {
-			watch_src: {
-				options: {
-					message: 'Finished compiling scripts and styles'
-				}
-			},
 			watch_styles: {
 				options: {
 					message: 'Finished compiling styles'
@@ -202,8 +198,8 @@ module.exports = function(grunt) {
 	// Default task for production
 	grunt.registerTask('default',
 		[
+			'sass',
 			'jshint',
-			'compass',
 			'copy:main',
 			'copy:scripts',     // copy over working scripts, referenced by sourcemaps
 			'cssmin',           // minifies vendor CSS
@@ -212,38 +208,6 @@ module.exports = function(grunt) {
 			'concat:vendor', 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
 			'imagemin',
 			'usebanner'         // add meta banner to CSS and JS
-		]
-	);
-
-	// Development build
-	// Does NOT compile vendor libraries or minify JS
-	grunt.registerTask('dev',
-		[
-			'jshint',
-			'compass:dist',
-			'copy:scripts',
-			'concat:working' // concatinate working JS
-		]
-	);
-
-	// Watch task, listens for changes on all working JS and SCSS
-	grunt.registerTask('watch-all',
-		[
-			'watch:src'
-		]
-	);
-
-	// Watch task, listens for style changes only
-	grunt.registerTask('watch-styles',
-		[
-			'watch:css'
-		]
-	);
-
-	// Watch task, listens for "working" JavaScript changes only
-	grunt.registerTask('watch-scripts',
-		[
-			'watch:js'
 		]
 	);
 
