@@ -88,7 +88,8 @@ module.exports = function(grunt) {
 
 		sass: {
 			options: {
-				style: 'compressed'
+				style: 'compressed',
+				sourcemap: true
 			},
 			dist: {
 				files: [{
@@ -98,6 +99,17 @@ module.exports = function(grunt) {
 					dest: '<%= config.outputPath %>styles',
 					ext: '.css'
 				}]
+			}
+		},
+
+		autoprefixer: {
+
+			// prefix the specified file
+			single_file: {
+				options: {
+					// Target-specific options go here.
+				},
+				src: '<%= config.outputPath %>styles/main.css'
 			}
 		},
 
@@ -173,7 +185,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
-				tasks: ['sass', 'notify:watch_styles']
+				tasks: ['sass', 'autoprefixer', 'notify:watch_styles']
 			},
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
@@ -199,6 +211,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default',
 		[
 			'sass',
+			'autoprefixer',
 			'jshint',
 			'copy:main',
 			'copy:scripts',     // copy over working scripts, referenced by sourcemaps

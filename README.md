@@ -59,7 +59,6 @@ Update `src/package.json` with your project details. Only the edit `devDependenc
 * [Bower](http://bower.io/)
 * [Grunt](http://gruntjs.com/)
 * [Sass](http://sass-lang.com/)
-* [Compass](http://compass-style.org/)
 
 ###Features & Integrated Technologies
 
@@ -71,7 +70,7 @@ Update `src/package.json` with your project details. Only the edit `devDependenc
 	-   [jQuery](http://jquery.com/)
 	-   [Modernizr](http://modernizr.com/)
 -   [JavaScript sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
--   [SASS](http://sass-lang.com/) & Compass
+-   [SASS](http://sass-lang.com/) (with sourcemaps)
 -   [Normalize.css](http://necolas.github.io/normalize.css/)
 -   A configurable base grid
 -   A methodology for for writing styles, with some examples
