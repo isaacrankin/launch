@@ -1,14 +1,17 @@
 ## [Launch](https://github.com/isaacwebfix/launch/)
 
-Launch is a simple and opinionated front-end boilerplate. It aims to be flexible enough to integrate with server side frameworks and to scale with a projects demands.
+Launch is a simple front-end boilerplate.
+
+It includes a bunch of popular front-end technologies such as jQuery, Backbone.js, Underscore.js, Modernizr and Normalize.css - all tied together with a Grunt build.
+If Launch doesn't suit you, checkout [Yeoman](http://yeoman.io/).
 
 ###Installation & Usage
 
 Before starting, check you have all the dependencies installed (listed below).
 
-1. Open the config directory
+1. Open the src directory
 
-		cd src/config
+		cd src
 
 2. Install vendor libraries
 
@@ -45,20 +48,20 @@ To commit the compiled state, delete the `.gitignore` file in the root directory
 
 ##Add Working JS files
 
-Open `src/config/Gruntconfig.json` and add your scripts to the `workingFiles` object, they are compiled in the same order.
+Open `src/config.json` and add your scripts to `workingFiles`; they are compiled in the same order.
 
 ###Add New Vendor Libraries/Packages
 
-1. Add the name and version to `scr/config/bower.json` and run `bower install`.
-2. Update `src/config/Gruntconfig.json` to include the new library, add it to `vendorFiles`
+1. Add the name and version to `src/bower.json` and run `bower install`.
+2. Update `src/config.json` to include the new library, add it to `vendorFiles`
 3. Re-compile with `grunt`
 
-If there is no [bower component](http://sindresorhus.com/bower-components/), copy the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
+If there is no [bower component](http://bower.io/search/), copy the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
 
-If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` and/or `builds/styles/vendor/`.
+If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` or `builds/styles/vendor/`.
 
 ###Customise your project
-Update `src/config/package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/config/Gruntfile.js`.
+Update `src/package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/Gruntfile.js`.
 
 ###Dependencies
 
@@ -70,24 +73,16 @@ Update `src/config/package.json` with your project details. Only the edit `devDe
 
 ###Features & Integrated Technologies
 
--   A GruntJS build
--   Bower for package management
+-   A [Grunt](http://gruntjs.com/) build process
+-   [Bower](http://bower.io/)
 -   JavaScript
-	-   Backbone.js
-	-   Underscore.js
-	-   jQuery
-	-   Modernizr
--   JavaScript sourcemaps for debugging
--   SCSS & Compass
--   normalize.css
+	-   [Backbone.js](http://backbonejs.org/)
+	-   [Underscore.js](http://underscorejs.org/)
+	-   [jQuery](http://jquery.com/)
+	-   [Modernizr](http://modernizr.com/)
+-   [JavaScript sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+-   [SASS](http://sass-lang.com/) & Compass
+-   [Normalize.css](http://necolas.github.io/normalize.css/)
 -   A configurable base grid
 -   A methodology for for writing styles, with some examples
 -   HTML style guide markup
--   Includes the build state and does not compile HTML
--   Easily customizable
-
-###Resources
-* [Available Bower components](http://sindresorhus.com/bower-components/)
-* [Using strict mode in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
-* [Source Maps in JavaScript](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
-* [JSHint Documentation](http://jshint.com/docs/)
