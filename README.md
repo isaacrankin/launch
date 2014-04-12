@@ -46,7 +46,7 @@ If you add another vendor library you'll need to run `grunt`.
 To commit the compiled state, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
 
 
-##Add Working JS files
+###Add Working JS files
 
 Open `src/config.json` and add your scripts to `workingFiles`; they are compiled in the same order.
 
