@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 					banner: '<%= meta.banner %>',
 					linebreak: true || false
 				},
+
 				files: {
 					src: [ '<%= config.outputPath %>scripts/main.min.js', '<%= config.outputPath %>styles/main.css' ]
 				}
@@ -44,6 +45,7 @@ module.exports = function(grunt) {
 					'<%= config.workingPath %>scripts/plugins.js'
 				]
 			},
+
 			all: [
 				'<%= config.workingFiles.scripts %>'
 			]
@@ -54,14 +56,12 @@ module.exports = function(grunt) {
 				options: {
 					optimizationLevel: 7
 				},
+
 				files: [
 					{
-						// Set to true to enable the following options…
 						expand: true,
-						// cwd is 'current working directory'
 						cwd: '<%= config.workingPath %>images/',
 						src: ['**/*.png'],
-						// Could also match cwd line above. i.e. project-directory/img/
 						dest: '<%= config.outputPath %>images/',
 						ext: '.png'
 					}
@@ -71,14 +71,12 @@ module.exports = function(grunt) {
 				options: {
 					progressive: true,
 				},
+
 				files: [
 					{
-						// Set to true to enable the following options…
 						expand: true,
-						// cwd is 'current working directory'
 						cwd: '<%= config.workingPath %>images/',
 						src: ['**/*.jpg'],
-						// Could also match cwd. i.e. project-directory/img/
 						dest: '<%= config.outputPath %>images/',
 						ext: '.jpg'
 					}
@@ -91,6 +89,7 @@ module.exports = function(grunt) {
 				style: 'compressed',
 				sourcemap: true
 			},
+
 			dist: {
 				files: [{
 					expand: true,
@@ -106,9 +105,6 @@ module.exports = function(grunt) {
 
 			// prefix the specified file
 			single_file: {
-				options: {
-					// Target-specific options go here.
-				},
 				src: '<%= config.outputPath %>styles/main.css'
 			}
 		},
@@ -130,9 +126,21 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-							cwd: '<%= config.workingPath %>scripts/',
+						cwd: '<%= config.workingPath %>scripts/',
 						src: ['**'],
 						dest: '<%= config.outputPath %>scripts/src/'
+					}
+				]
+			},
+
+			// Copy over working HTML
+			html: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= config.workingPath %>',
+						src: ['<%= config.workingPath %>*.html'],
+						dest: '<%= config.outputPath %>'
 					}
 				]
 			}
@@ -143,6 +151,7 @@ module.exports = function(grunt) {
 				src: '<%= config.workingFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/main.min.js'
 			},
+
 			vendor: {
 				src: '<%= config.vendorFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/lib.min.js'
@@ -164,11 +173,13 @@ module.exports = function(grunt) {
 					'<%= config.outputPath %>scripts/lib.min.js': '<%= config.vendorFiles.scripts %>'
 				}
 			},
+
 			modernizr: {
 				files: {
 					'<%= config.outputPath %>scripts/vendor/modernizr.min.js': '<%= config.vendorPath %>modernizr/modernizr.js'
 				}
 			},
+
 			main: {
 				files: {
 					'<%= config.outputPath %>scripts/main.min.js': '<%= config.workingFiles.scripts %>'
@@ -187,6 +198,7 @@ module.exports = function(grunt) {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
 				tasks: ['sass', 'autoprefixer', 'notify:watch_styles']
 			},
+
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
 				tasks: ['jshint', 'copy:scripts', 'concat:working', 'notify:watch_scripts']
@@ -214,13 +226,14 @@ module.exports = function(grunt) {
 			'autoprefixer',
 			'jshint',
 			'copy:main',
-			'copy:scripts',     // copy over working scripts, referenced by sourcemaps
-			'cssmin',           // minifies vendor CSS
-			'uglify:modernizr', // concatinate and minify Modernizr because it doesn't come minified
-			'uglify:main', 		// concatinate and minify working JS
-			'concat:vendor', 	// concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+			'copy:scripts',     // Copy over working scripts, referenced by sourcemaps
+			'cssmin',           // Minifies vendor CSS
+			'uglify:modernizr', // Minify Modernizr because it doesn't come minified
+			'uglify:main', 		// Concatinate and minify working JS
+			'concat:vendor', 	// Concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
 			'imagemin',
-			'usebanner'         // add meta banner to CSS and JS
+			'usebanner',		// Add meta banner to CSS and JS
+			'copy:html'
 		]
 	);
 
