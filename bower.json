@@ -1,11 +1,11 @@
 {
   "name": "Launch",
-  "version": "0.2",
+  "version": "0.5",
   "dependencies": {
-    "modernizr": "~2.7.1",
-    "jquery": "~1.11",
+    "modernizr": "~2.8.2",
+    "jquery": "~1.11.1",
     "underscore": "~1.6.0",
     "backbone": "~1.1.2",
-    "normalize-css": "~3.0.0"
+    "normalize-css": "~3.0.1"
   }
 }
