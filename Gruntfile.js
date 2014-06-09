@@ -110,7 +110,26 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			main: {
+
+			// Anything that needs copying
+			dist: {
+				files: [{
+					expand: true,
+					dot: true,
+					cwd: '<%= config.workingPath %>',
+					dest: '<%= config.outputPath %>',
+					src: [
+						'*.{ico,txt,html}',
+						'favicon.png',
+						'apple-touch-icon-precomposed.png',
+						'fonts/{,*/}*.*',
+						'images/{,*/}*.svg'
+					]
+				}]
+			},
+
+			// Copy vendor CSS
+			vendor_css: {
 				files: [
 					{
 						expand: true,
@@ -129,18 +148,6 @@ module.exports = function(grunt) {
 						cwd: '<%= config.workingPath %>scripts/',
 						src: ['**'],
 						dest: '<%= config.outputPath %>scripts/src/'
-					}
-				]
-			},
-
-			// Copy over working HTML
-			html: {
-				files: [
-					{
-						expand: true,
-						cwd: '<%= config.workingPath %>',
-						src: ['<%= config.workingPath %>*.html'],
-						dest: '<%= config.outputPath %>'
 					}
 				]
 			}
@@ -225,15 +232,15 @@ module.exports = function(grunt) {
 			'sass',
 			'autoprefixer',
 			'jshint',
-			'copy:main',
-			'copy:scripts',     // Copy over working scripts, referenced by sourcemaps
+			'copy',
+		//	'copy:main',
+		//	'copy:scripts',     // Copy over working scripts, referenced by sourcemaps
 			'cssmin',           // Minifies vendor CSS
 			'uglify:modernizr', // Minify Modernizr because it doesn't come minified
 			'uglify:main', 		// Concatinate and minify working JS
 			'concat:vendor', 	// Concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
 			'imagemin',
 			'usebanner',		// Add meta banner to CSS and JS
-			'copy:html'
 		]
 	);
 
