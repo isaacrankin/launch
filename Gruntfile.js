@@ -120,6 +120,7 @@ module.exports = function(grunt) {
 					dest: '<%= config.outputPath %>',
 					src: [
 						'*.{ico,txt,html}',
+						'.htaccess',
 						'favicon.png',
 						'apple-touch-icon-precomposed.png',
 						'fonts/{,*/}*.*',
