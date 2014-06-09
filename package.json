@@ -2,7 +2,7 @@
   "name": "Launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate.",
-  "version": "0.5",
+  "version": "0.5.0",
   "main": "Gruntfile.js",
   "repository": "https://github.com/isaacwebfix/launch",
   "author": {

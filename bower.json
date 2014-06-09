@@ -1,6 +1,6 @@
 {
   "name": "Launch",
-  "version": "0.5",
+  "version": "0..5.0",
   "dependencies": {
     "modernizr": "~2.8.2",
     "jquery": "~1.11.1",
