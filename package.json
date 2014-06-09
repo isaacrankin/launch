@@ -2,11 +2,8 @@
   "name": "Launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate.",
-  "version": "0.4.2",
+  "version": "0.5",
   "main": "Gruntfile.js",
-  "scripts": {
-    "test": "grunt"
-  },
   "repository": "https://github.com/isaacwebfix/launch",
   "author": {
     "name": "Isaac Rankin",

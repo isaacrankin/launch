@@ -3,4 +3,12 @@
 *.sublime-workspace
 *.sublime-project
 
-build/
+.sass-cache
+node_modules/
+vendor/*
+npm-debug.log
+
+images/*.png*
+images/*.jpg*
+images/*.jpeg*
+images/*.gif*

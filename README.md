@@ -9,23 +9,19 @@ If Launch doesn't suit you, checkout [Yeoman](http://yeoman.io/).
 
 Before starting, check you have all the dependencies installed (listed below).
 
-1. Open the src directory
-
-		cd src
-
-2. Install vendor libraries
+1. Install vendor libraries
 
 		bower install
 
-3. Install Grunt dependencies
+2. Install build dependencies
 
 		npm install
 
-4. Run Grunt
+3. Run Grunt
 
 		grunt
 
-5. Watch for file changes with Grunt.
+4. Watch for file changes with Grunt.
 This only complies working JS and SCSS.
 
 		grunt watch
@@ -33,25 +29,20 @@ This only complies working JS and SCSS.
 #####Notes
 If you add another vendor library you'll need to run `grunt`.
 
-To commit the compiled state, delete the `.gitignore` file in the root directory but keep `src/.gitignore`.
-
-
 ###Add Working JS files
 
-Open `src/config.json` and add your scripts to `workingFiles`; they are compiled in the same order.
+Open `config.json` and add your scripts to `workingFiles`; they are compiled in the same order.
 
 ###Add New Vendor Libraries/Packages
 
-1. Add the name and version to `src/bower.json` and run `bower install`.
-2. Update `src/config.json` to include the new library, add it to `vendorFiles`
+1. Add the name and version to `bower.json` and run `bower install`.
+2. Update `config.json` to include the new library, add it to `vendorFiles`
 3. Re-compile with `grunt`
 
-If there is no [bower component](http://bower.io/search/), copy the files manually to `src/vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
-
-If you don't want the library to be compiled just copy the files directly to `build/scripts/vendor/` or `builds/styles/vendor/`.
+If there is no [bower component](http://bower.io/search/), copy the files manually to `vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
 
 ###Customise your project
-Update `src/package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/Gruntfile.js`.
+Update `package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/Gruntfile.js`.
 
 ###Dependencies
 
