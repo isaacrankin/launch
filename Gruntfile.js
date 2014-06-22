@@ -222,23 +222,23 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
-				tasks: ['sass', 'autoprefixer', 'notify:watch_styles']
+				tasks: ['newer:sass', 'newer:autoprefixer', 'modernizr', 'newer:cssmin', 'newer:imagemin', 'notify:watch_styles']
 			},
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
-				tasks: ['jshint', 'copy:scripts', 'concat:working', 'notify:watch_scripts']
+				tasks: ['newer:jshint', 'modernizr', 'newer:copy:scripts', 'newer:uglify:main', 'notify:watch_scripts']
 			}
 		},
 
 		notify: {
 			watch_styles: {
 				options: {
-					message: 'Finished compiling styles'
+					message: 'Finished building styles'
 				}
 			},
 			watch_scripts: {
 				options: {
-					message: 'Finished compiling scripts'
+					message: 'Finished building scripts'
 				}
 			}
 		}
@@ -247,15 +247,15 @@ module.exports = function(grunt) {
 	// Default task for production
 	grunt.registerTask('default',
 		[
-			'sass',
-			'autoprefixer',
-			'copy',
-			'cssmin',
+			'newer:sass',
+			'newer:autoprefixer',
+			'newer:cssmin',
+			'newer:copy',
+			'newer:jshint',
 			'modernizr',
-			'jshint',
-			'uglify:main',
-			'uglify:vendor',
-			'imagemin',
+			'newer:uglify:main',
+			'newer:uglify:vendor',
+			'newer:imagemin',
 			'usebanner'
 		]
 	);
