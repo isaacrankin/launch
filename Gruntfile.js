@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 		// Import build config
 		config: grunt.file.readJSON("config.json"),
 
-		// Banner definition
 		meta: {
 			banner: "/*\n" +
 				" *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n" +
@@ -31,7 +30,6 @@ module.exports = function(grunt) {
 					banner: '<%= meta.banner %>',
 					linebreak: true || false
 				},
-
 				files: {
 					src: [ '<%= config.outputPath %>scripts/main.min.js', '<%= config.outputPath %>styles/main.css' ]
 				}
@@ -45,7 +43,6 @@ module.exports = function(grunt) {
 					'<%= config.workingPath %>scripts/plugins.js'
 				]
 			},
-
 			all: [
 				'<%= config.workingFiles.scripts %>'
 			]
@@ -56,7 +53,6 @@ module.exports = function(grunt) {
 				options: {
 					optimizationLevel: 7
 				},
-
 				files: [
 					{
 						expand: true,
@@ -89,7 +85,6 @@ module.exports = function(grunt) {
 				style: 'compressed',
 				sourcemap: true
 			},
-
 			dist: {
 				files: [{
 					expand: true,
@@ -102,8 +97,6 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
-
-			// prefix the specified file
 			single_file: {
 				src: '<%= config.outputPath %>styles/main.css'
 			}
@@ -111,7 +104,7 @@ module.exports = function(grunt) {
 
 		copy: {
 
-			// Anything that needs copying
+			// Add anything that needs copying
 			dist: {
 				files: [{
 					expand: true,
@@ -128,8 +121,6 @@ module.exports = function(grunt) {
 					]
 				}]
 			},
-
-			// Copy vendor CSS
 			vendor_css: {
 				files: [
 					{
@@ -159,7 +150,6 @@ module.exports = function(grunt) {
 				src: '<%= config.workingFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/main.min.js'
 			},
-
 			vendor: {
 				src: '<%= config.vendorFiles.scripts %>',
 				dest: '<%= config.outputPath %>scripts/lib.min.js'
@@ -175,27 +165,55 @@ module.exports = function(grunt) {
 			}
 		},
 
+		modernizr: {
+			dist: {
+				'devFile' : '<%= workingPath %>vendor/modernizr/modernizr.js',
+				'outputFile' : '<%= config.outputPath %>scripts/vendor/modernizr.min.js',
+				'extra' : {
+					'shiv' : true,
+					'printshiv' : false,
+					'load' : true,
+					'mq' : false,
+					'cssclasses' : true
+				},
+				'extensibility' : {
+					'addtest' : false,
+					'prefixed' : false,
+					'teststyles' : false,
+					'testprops' : false,
+					'testallprops' : false,
+					'hasevents' : false,
+					'prefixes' : false,
+					'domprefixes' : false
+				},
+				'uglify' : true,
+
+				// Define any tests you want to explictly include.
+				'tests' : [],
+				'parseFiles' : true,
+				'files' : {
+					'src': ['<%= config.workingFiles.scripts %>',
+							'<%= config.workingPath %>styles/**/*.scss']
+				},
+				'matchCommunityTests' : false,
+				'customTests' : []
+			}
+		},
+
 		uglify: {
 			vendor: {
 				files: {
 					'<%= config.outputPath %>scripts/lib.min.js': '<%= config.vendorFiles.scripts %>'
 				}
 			},
-
-			modernizr: {
-				files: {
-					'<%= config.outputPath %>scripts/vendor/modernizr.min.js': '<%= config.vendorPath %>modernizr/modernizr.js'
-				}
-			},
-
 			main: {
 				files: {
 					'<%= config.outputPath %>scripts/main.min.js': '<%= config.workingFiles.scripts %>'
 				},
 				options:{
-					sourceMappingURL: "main.map",
-					sourceMap: "<%= config.outputPath %>scripts/main.map",
-					sourceMapRoot: "src/",
+					sourceMappingURL: 'main.map',
+					sourceMap: '<%= config.outputPath %>scripts/main.map',
+					sourceMapRoot: 'src/',
 					sourceMapPrefix: 2
 				}
 			}
@@ -206,7 +224,6 @@ module.exports = function(grunt) {
 				files: ['<%= config.workingPath %>styles/{,*/}*.{scss,sass}'],
 				tasks: ['sass', 'autoprefixer', 'notify:watch_styles']
 			},
-
 			js: {
 				files: ['<%= config.workingPath %>scripts/*.js'],
 				tasks: ['jshint', 'copy:scripts', 'concat:working', 'notify:watch_scripts']
@@ -232,16 +249,14 @@ module.exports = function(grunt) {
 		[
 			'sass',
 			'autoprefixer',
-			'jshint',
 			'copy',
-		//	'copy:main',
-		//	'copy:scripts',     // Copy over working scripts, referenced by sourcemaps
-			'cssmin',           // Minifies vendor CSS
-			'uglify:modernizr', // Minify Modernizr because it doesn't come minified
-			'uglify:main', 		// Concatinate and minify working JS
-			'concat:vendor', 	// Concatinate JS libraries, use "uglify:vendor" to concatinate and minify vendor scripts
+			'cssmin',
+			'modernizr',
+			'jshint',
+			'uglify:main',
+			'uglify:vendor',
 			'imagemin',
-			'usebanner',		// Add meta banner to CSS and JS
+			'usebanner'
 		]
 	);
 
