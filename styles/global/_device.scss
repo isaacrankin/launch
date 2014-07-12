@@ -8,13 +8,6 @@
 // --------------------------------------------------------------------
 @media only screen and (max-width: $layout-breakpoint-medium) {
 
-	// For example: Drop to single column layout
-	.row{
-		[class^="col-"],
-		[class*="col-"]{
-			width: 100%;
-		}
-	}
 }
 
 // Medium width screens

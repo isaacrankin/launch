@@ -4,10 +4,13 @@
 @import "partials/settings";
 @import "partials/mixins";
 
+// Vendor
+// --------------------------------------------------------------------
+@import "../vendor/foundation/scss/foundation/components/_grid";
+
 // Global
 // --------------------------------------------------------------------
 @import "global/base";
-@import "global/grid";
 @import "global/fonts";
 
 // Elements

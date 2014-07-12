@@ -11,9 +11,3 @@
 		background-image:url("../images/common/#{$key}-2x.png");
 	}
 }
-
-@mixin row{
-	width: 100%;
-	float: left;
-	clear: both;
-}
