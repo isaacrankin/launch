@@ -35,7 +35,7 @@
 		</nav>
 	</header>
 	<main role="main">
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h1>Style Guide Template</h1>
@@ -57,10 +57,14 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, harum, aliquid, odio, optio in cumque officiis nobis mollitia repellendus omnis enim autem sunt maiores sint consectetur eaque tempora. Mollitia, placeat!</p>
 					</blockquote>
 					<h3>Code Block</h3>
-					<code>
-						<pre>
-						</pre>
-					</code>
+					<pre>
+						<code>
+							var something = "something";
+							var test = {
+									attr: "some value";
+							};
+						</code>
+					</pre>
 					<h3>Example Address</h3>
 					<address>
 						You can contact author at <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
@@ -74,12 +78,12 @@
 					</address>
 				</div>
 			</div>
-		</article>
-		<article>
+		</section>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Forms</h2>
-					<form action="" method="POST" autocomplete="on" enctype="">
+					<form method="POST" autocomplete="on" enctype="multipart/form-data">
 						<fieldset>
 							<legend>Common Inputs</legend>
 							<div class="row">
@@ -105,10 +109,6 @@
 							<div class="row">
 								<label for="example-field-number">Example number label</label>
 								<input id="example-field-number" type="number" name="example-field-number" min="0" max="12" step="2" value="3" placeholder="5">
-							</div>
-							<div class="row">
-								<label for="example-field-range">Example range label</label>
-								<input id="example-field-range" type="range" name="example-field-range" min="0" max="12" step="2" value="3" placeholder="5">
 							</div>
 							<div class="row">
 								<textarea name="example-field-textarea" id="example-field-textarea" cols="30" rows="10" placeholder="Example textarea"></textarea>
@@ -141,11 +141,7 @@
 							</div>
 							<div class="row">
 								<label for="example-field-file">Example field file</label>
-								<input name="example-field-file" type="file">
-							</div>
-							<div class="row">
-								<label for="example-field-search">Example search field</label>
-								<input type="search" id="example-field-search" placeholder="enter search query"/>
+								<input id="example-field-file" name="example-field-file" type="file">
 							</div>
 						</fieldset>
 						<fieldset>
@@ -167,15 +163,15 @@
 								<input id="example-field-month" type="month" name="example-field-month">
 							</div>
 							<div class="row">
-								<label for="example-field-time">Example time label</label>
-								<input id="example-field-time-local" type="time" name="example-field-time-">
+								<label for="example-field-time-local">Example time label</label>
+								<input id="example-field-time-local" type="time" name="example-field-time-local">
 							</div>
 						</fieldset>
 						<fieldset>
 							<legend>Less Common Inputs</legend>
 							<div class="row">
 								<label for="example-field-color">Example color label</label>
-								<input id="example-field-color" type="color" name="example-field-color" placeholder="example color input">
+								<input id="example-field-color" type="color" name="example-field-color">
 							</div>
 							<div class="row">
 								<label for="example-field-range">Example range label</label>
@@ -186,13 +182,13 @@
 					</form>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Tables</h2>
-					<table cellpadding="10" cellspacing="5">
+					<table>
 						<caption>Awesome caption</caption>
 						<tbody>
 							<tr>
@@ -223,9 +219,9 @@
 					</table>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Lists</h2>
@@ -274,9 +270,9 @@
 					</ol>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Grid</h2>
@@ -315,9 +311,9 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, blanditiis distinctio eligendi eos eveniet ex excepturi illo, minima molestiae nesciunt nihil nostrum nulla pariatur quaerat quisquam quod reiciendis saepe sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum deleniti deserunt eveniet excepturi incidunt itaque neque praesentium, quisquam, recusandae repellat voluptatem voluptates voluptatibus! Assumenda esse excepturi nostrum quae quaerat suscipit.</p>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Design Patterns</h2>
@@ -325,9 +321,9 @@
 					<button name="button">Click me</button>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Media</h2>
@@ -341,15 +337,15 @@
 					</audio>
 				</div>
 			</div>
-		</article>
+		</section>
 
-		<article>
+		<section>
 			<div class="row">
 				<div class="col-12">
 					<h2>Miscellaneous</h2>
 				</div>
 			</div>
-		</article>
+		</section>
 	</main>
 	<footer>
 		<h3>Footer Content</h3>
