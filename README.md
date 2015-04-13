@@ -4,36 +4,31 @@ Launch is a simple front-end boilerplate created by [Isaac Rankin](http://isaacr
 
 It basically extends [HTML5 boilerplate](https://html5boilerplate.com/).
 
-It includes popular front-end technologies such as jQuery, Foundation, Modernizr and Normalize.css, tied together with a Grunt build.
+It includes popular front-end technologies such as SASS, jQuery, Foundation, Modernizr and Normalize.css, tied together with a Grunt build.
 
 ###Installation & Usage
 
-Before starting, check you have all the dependencies installed (listed below).
-
-1. Install vendor libraries
-
-		bower install
-
-2. Install build dependencies
+1. Install build dependencies (auto runs `bower install`)
 
 		npm install
 
-3. Run Grunt
+2. Run Grunt
 
 		grunt
 
 4. Watch for file changes with Grunt.
-This only complies working JS and SCSS.
 
 		grunt watch
 
+If these steps failed, check that you have all the dependencies installed.
+
 ###Add New Vendor Libraries/Packages
 
-1. User [bower to install](http://bower.io/#install-packages) the package, e.g. `bower install package-name --save`
+1. Use [bower to install](http://bower.io/#install-packages) the package, e.g. `bower install package-name --save`
 2. Update `config.json` to include the new library, add it to `vendorFiles`
 3. Re-compile with `grunt`
 
-If there is no [bower component](http://bower.io/search/), copy the files manually to `vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
+If there is no [bower package](http://bower.io/search/), copy the files manually to `vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
 
 ###Dependencies
 
@@ -51,3 +46,7 @@ If there is no [bower component](http://bower.io/search/), copy the files manual
 -   JavaScript
 	-   [jQuery](http://jquery.com/)
 	-   [Modernizr](http://modernizr.com/)
+
+###Notes
+
+- Sourcemaps with SASS map back to the original styles directory, so if your web root is `dist` sourcemaps won't work properly. This shouldn't be a problem for development.
