@@ -21,6 +21,8 @@ module.exports = {
                 'browserconfig.xml',
                 'crossdomain.xml',
                 'apple-touch-icon.png',
+                'tile.png',
+                'tile-wide.png',
                 'fonts/{,*/}*.*',
                 'images/{,*/}*.{svg,ico}'
             ]
