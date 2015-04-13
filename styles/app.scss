@@ -1,4 +1,3 @@
-
 // Settings & utilities
 // --------------------------------------------------------------------
 @import "partials/settings";
@@ -13,17 +12,13 @@
 @import "global/base";
 @import "global/fonts";
 
-// Elements
+// Elements - small reusable UI - buttons, accordions, widgets etc.
 // --------------------------------------------------------------------
 @import "elements/buttons";
 
-// Blocks
+// Blocks - these include large chunks of UI, e.g. headers, footers sliders, menus, page styles
 // --------------------------------------------------------------------
 @import "blocks/header";
-
-// Pages
-// --------------------------------------------------------------------
-@import "pages/homepage";
 
 // Media Queries
 // --------------------------------------------------------------------

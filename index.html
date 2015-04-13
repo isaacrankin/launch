@@ -1,336 +1,55 @@
-<!DOCTYPE html>
-<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js ie8" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9" lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Launch - Style Guide</title>
-	<link rel="stylesheet" href="styles/vendor/normalize.css">
-	<link rel="stylesheet" href="styles/main.css">
-	<script src="scripts/vendor/modernizr.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Launch - Front-end Boilerplate</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.min.css">
+    <link rel="stylesheet" href="styles/app.min.css">
+    <script src="scripts/vendor/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-XXXXX-X']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+    <main role="main">
+        <header>
+            <h1>Launch</h1>
+        </header>
+        <hr/>
+        <section>
 
-	<div class="row">
-		<div class="column">
-			<header>
-				<h2><a href="/">Style Guide Template</a></h2>
-				<nav role="navigation">
-					<ol>
-						<li><a href="#typography" title="Example">Typography</a></li>
-						<li><a href="#forms" title="Example">Forms</a></li>
-						<li><a href="#tables" title="Example">Tables</a></li>
-						<li><a href="#lists" title="Example">Lists</a></li>
-						<li><a href="#grid" title="Example">Grid</a></li>
-					</ol>
-				</nav>
-			</header>
-		</div>
-	</div>
-	<main role="main">
-		<section id="typography">
-			<div class="row">
-				<div class="column">
-					<h1>This is a 1st level heading</h1>
-					<h2>This is 2nd level heading</h2>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque? This is a test paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque? This is a test paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<h3>This is 3rd level heading</h3>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<p>Here is an example of an <abbr title="HTML Abbreviation Element">abbr</abbr></p>
-					<h4>This is 4th level heading</h4>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<hr>
-					<h5>This is 5th level heading</h5>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<h6>This is 6th level heading</h6>
-					<p><strong>This is a test paragraph.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, deleniti, harum sed ipsam modi iusto id odit quam <a href="#" title="anchor link">anchor link</a> quidem optio accusantium voluptatem nemo sapiente commodi nam placeat aspernatur qui neque?</p>
-					<img src="images/content-image.jpg" alt="New Chums" width="1020" height="680">
-					<h3>Example blockquote</h3>
-					<blockquote cite="http://developer.mozilla.org">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, harum, aliquid, odio, optio in cumque officiis nobis mollitia repellendus omnis enim autem sunt maiores sint consectetur eaque tempora. Mollitia, placeat!</p>
-					</blockquote>
-					<h3>Code Block</h3>
-					<pre>
-						<code>
-							var something = "something";
-							var test = {
-									attr: "some value";
-							};
-						</code>
-					</pre>
-					<h3>Example Address</h3>
-					<address>
-						You can contact author at <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
-						If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br>
-						You may also want to visit us:<br>
-						Mozilla Foundation<br>
-						1981 Landings Drive<br>
-						Building K<br>
-						Mountain View, CA 94043-0801<br>
-						USA
-					</address>
-				</div>
-			</div>
-		</section>
-		<section id="forms">
-			<div class="row">
-				<div class="column">
-					<h2>Forms</h2>
-					<form method="POST" autocomplete="on" enctype="multipart/form-data">
-						<fieldset>
-							<legend>Common Inputs</legend>
-							<div class="row">
-								<label for="example-field">Example label</label>
-								<input id="example-field" type="text" name="example-field" placeholder="example text input">
-							</div>
-							<div class="row">
-								<label for="example-field-search">Example search label</label>
-								<input id="example-field-search" type="search" name="example-field-search" placeholder="example search input">
-							</div>
-							<div class="row">
-								<label for="example-field-email">Example email label</label>
-								<input id="example-field-email" type="email" name="example-field-email" placeholder="example email input">
-							</div>
-							<div class="row">
-								<label for="example-field-password">Example password label</label>
-								<input id="example-field-password" type="password" name="example-field-password" required>
-							</div>
-							<div class="row">
-								<label for="example-field-url">Example url label</label>
-								<input id="example-field-url" type="url" name="example-field-url" placeholder="example url input">
-							</div>
-							<div class="row">
-								<label for="example-field-number">Example number label</label>
-								<input id="example-field-number" type="number" name="example-field-number" min="0" max="12" step="2" value="3" placeholder="5">
-							</div>
-							<div class="row">
-								<textarea name="example-field-textarea" id="example-field-textarea" cols="30" rows="10" placeholder="Example textarea"></textarea>
-							</div>
-							<div class="row">
-								<select name="example-select" id="example-select">
-									<option value="one">Option one</option>
-									<option value="two">Option two</option>
-									<option value="three">Option three</option>
-									<option value="four">Option four</option>
-									<option value="five">Option five</option>
-									<option value="six">Option six</option>
-								</select>
-							</div>
-							<div class="row">
-								<label for="example-field-checkbox">Checkbox label</label>
-								<input id="example-field-checkbox" type="checkbox" name="example-field-checkbox" value="">
-								<label for="example-field-checkbox-two">Checkbox label</label>
-								<input id="example-field-checkbox-two" type="checkbox" name="example-field-checkbox-two" value="">
-								<label for="example-field-checkbox-three">Checkbox label</label>
-								<input id="example-field-checkbox-three" type="checkbox" name="example-field-checkbox-three" value="">
-							</div>
-							<div class="row">
-								<label for="example-field-radio">Radio label</label>
-								<input id="example-field-radio" type="radio" name="example-field-radio" value="">
-								<label for="example-field-radio-two">Radio label</label>
-								<input id="example-field-radio-two" type="radio" name="example-field-radio" value="">
-								<label for="example-field-radio-three">Radio label</label>
-								<input id="example-field-radio-three" type="radio" name="example-field-radio" value="">
-							</div>
-							<div class="row">
-								<label for="example-field-file">Example field file</label>
-								<input id="example-field-file" name="example-field-file" type="file">
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Date/Time Inputs</legend>
-							<div class="row">
-								<label for="example-field-date">Example date label</label>
-								<input id="example-field-date" type="date" name="example-field-date">
-							</div>
-							<div class="row">
-								<label for="example-field-datetime">Example datetime label</label>
-								<input id="example-field-datetime" type="datetime" name="example-field-datetime">
-							</div>
-							<div class="row">
-								<label for="example-field-datetime-local">Example date-time-local label</label>
-								<input id="example-field-datetime-local" type="datetime-local" name="example-field-datetime-local">
-							</div>
-							<div class="row">
-								<label for="example-field-month">Example month label</label>
-								<input id="example-field-month" type="month" name="example-field-month">
-							</div>
-							<div class="row">
-								<label for="example-field-time-local">Example time label</label>
-								<input id="example-field-time-local" type="time" name="example-field-time-local">
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Less Common Inputs</legend>
-							<div class="row">
-								<label for="example-field-color">Example color label</label>
-								<input id="example-field-color" type="color" name="example-field-color">
-							</div>
-							<div class="row">
-								<label for="example-field-range">Example range label</label>
-								<input id="example-field-range" type="range" name="example-field-range">
-							</div>
-						</fieldset>
-						<input type="submit" value="submit">
-					</form>
-				</div>
-			</div>
-		</section>
-		<section id="tables">
-			<div class="row">
-				<div class="column">
-					<h2>Tables</h2>
-					<table>
-						<caption>Awesome caption</caption>
-						<tbody>
-							<tr>
-								<th>Column 1</th>
-								<th>Column 2</th>
-								<th>Column 3</th>
-								<th>Column 4</th>
-							</tr>
-							<tr>
-								<td>Cell content one</td>
-								<td>Cell content two</td>
-								<td>Cell content three</td>
-								<td>Cell content four</td>
-							</tr>
-							<tr>
-								<td>Cell content one</td>
-								<td>Cell content two</td>
-								<td>Cell content three</td>
-								<td>Cell content four</td>
-							</tr>
-							<tr>
-								<td>Cell content one</td>
-								<td>Cell content two</td>
-								<td>Cell content three</td>
-								<td>Cell content four</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</section>
-		<section id="lists">
-			<div class="row">
-				<div class="column">
-					<h2>Lists</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column large-4">
-					<ul>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-					</ul>
-				</div>
-				<div class="column large-4">
-					<ol>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-						<li>List item text</li>
-					</ol>
-				</div>
-				<div class="column large-4">
-					<ol>
-						<li>first item</li>
-						<li>second item
-							<ol>
-								<li>second item first subitem</li>
-								<li>second item second subitem</li>
-								<li>second item third subitem</li>
-							</ol>
-						</li>
-						<li>third item</li>
-					</ol>
-				</div>
-			</div>
-		</section>
-		<section id="grid">
-			<div class="row">
-				<div class="column">
-					<h2>Grid from <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation</a></h2>
-				</div>
-			</div>
-			<div class="row">
-			  <div class="small-2 large-4 columns">
-				<span class="show-for-small">2</span><span class="hide-for-small">4</span>
-			</div>
-			  <div class="small-4 large-4 columns">4</div>
-			  <div class="small-6 large-4 columns">
-				<span class="show-for-small">6</span><span class="hide-for-small">4</span>
-				</div>
-			</div>
-			<div class="row">
-			  <div class="large-3 columns"><span class="show-for-small">full</span><span class="hide-for-small">3</span></div>
-			  <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
-			  <div class="large-3 columns"><span class="show-for-small">full</span><span class="hide-for-small">3</span></div>
-			</div>
-			<div class="row">
-			  <div class="small-3 columns">3</div>
-			  <div class="small-9 columns">9</div>
-			</div>
-			<div class="row">
-			  <div class="large-4 columns"><span class="show-for-small">full</span><span class="hide-for-small">4</span></div>
-			  <div class="large-8 columns"><span class="show-for-small">full</span><span class="hide-for-small">8</span></div>
-			</div>
-			<div class="row">
-			  <div class="small-6 large-5 columns"><span class="show-for-small">6</span><span class="hide-for-small">5</span></div>
-			  <div class="small-6 large-7 columns"><span class="show-for-small">6</span><span class="hide-for-small">7</span></div>
-			</div>
-			<div class="row">
-			  <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
-			  <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
-			</div>
-		</section>
-	</main>
-	<footer>
-		<div class="row">
-			<div class="column">
-				<h3>Footer Content</h3>
-				<nav>
-					<ol>
-						<li><a href="#" title="Home">Home</a></li>
-						<li><a href="#" title="About">About</a></li>
-						<li><a href="#" title="Contact">Contact</a></li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-	</footer>
-	<script src="scripts/lib.min.js"></script>
-	<script src="scripts/main.min.js"></script>
+
+            <h2>Setup</h2>
+            <code title="enter in your terminal">npm install</code><br/>
+            <!--<code title="enter in your terminal">bower install</code><br/>-->
+            <code title="enter in your terminal">grunt; grunt watch</code>
+            <p>If that didn't work, make sure these are installed: <a href="http://nodejs.org/">Node.js</a> and <a href="http://bower.io/">Bower</a>, <a href="http://gruntjs.com/getting-started">Grunt</a>.</p>
+        </section>
+    </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+    <script src="scripts/app.min.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
 </body>
 </html>

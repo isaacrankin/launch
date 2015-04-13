@@ -1,13 +1,51 @@
 // Mixins
 // --------------------------------------------------------------------
 
-@mixin sprite($x: center, $y:0, $key: "sprite", $width: $sprite-width, $height: $sprite-height) {
-	background-image:url("../images/common/#{$key}.png");
-	background-repeat: no-repeat;
-	background-position:$x $y;
-	background-size:$width $height;
+@mixin sprite($width, $height, $x: center, $y:0, $key: "sprite") {
+    background-image:url("../images/#{$key}.png");
+    background-repeat: no-repeat;
+    background-position:$x $y;
+    background-size:$width $height;
 
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-		background-image:url("../images/common/#{$key}-2x.png");
-	}
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image:url("../images/#{$key}-2x.png");
+    }
+}
+
+@mixin reset-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin rounded($size: 10px){
+    width: $size;
+    height: $size;
+    border-radius: $size;
+}
+
+@mixin flex-vert-center($height: 100%){
+    height: $height;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    display: box;
+
+    position: relative;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    box-align: center;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-direction: row;
+
+    box-direction: normal;
+    box-pack: center;
 }

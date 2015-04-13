@@ -1,9 +1,10 @@
-## [Launch](https://github.com/isaacwebfix/launch/)
+## [Launch](https://github.com/isaacwebfix/launch)
 
-Launch is a simple front-end boilerplate.
+Launch is a simple front-end boilerplate created by [Isaac Rankin](http://isaacrankin.com/).
 
-It includes a bunch of popular front-end technologies such as jQuery, Backbone.js, Underscore.js, Modernizr and Normalize.css - all tied together with a Grunt build.
-If Launch doesn't suit you, checkout [Yeoman](http://yeoman.io/).
+It basically extends [HTML5 boilerplate](https://html5boilerplate.com/).
+
+It includes popular front-end technologies such as jQuery, Foundation, Modernizr and Normalize.css, tied together with a Grunt build.
 
 ###Installation & Usage
 
@@ -26,43 +27,27 @@ This only complies working JS and SCSS.
 
 		grunt watch
 
-#####Notes
-If you add another vendor library you'll need to run `grunt`.
-
-###Add Working JS files
-
-Open `config.json` and add your scripts to `workingFiles`; they are compiled in the same order.
-
 ###Add New Vendor Libraries/Packages
 
-1. Add the name and version to `bower.json` and run `bower install`.
+1. User [bower to install](http://bower.io/#install-packages) the package, e.g. `bower install package-name --save`
 2. Update `config.json` to include the new library, add it to `vendorFiles`
 3. Re-compile with `grunt`
 
 If there is no [bower component](http://bower.io/search/), copy the files manually to `vendor` and update the `.gitignore` file so they are tracked. Then follow steps 2 and 3.
-
-###Customise your project
-Update `package.json` with your project details. Only the edit `devDependencies` if you are also updating the build configuration in `src/Gruntfile.js`.
 
 ###Dependencies
 
 * [Node.js](http://nodejs.org/)
 * [Bower](http://bower.io/)
 * [Grunt](http://gruntjs.com/)
-* [Sass](http://sass-lang.com/)
 
 ###Features & Integrated Technologies
 
--   A [Grunt](http://gruntjs.com/) build process
--   [Bower](http://bower.io/)
+-   [Grunt](http://gruntjs.com/) for the build process
+-   [Bower](http://bower.io/) for package management
+-   [SASS](http://sass-lang.com/)
+-   [Normalize.css](http://necolas.github.io/normalize.css/)
+-   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid is used by default.
 -   JavaScript
-	-   [Backbone.js](http://backbonejs.org/)
-	-   [Underscore.js](http://underscorejs.org/)
 	-   [jQuery](http://jquery.com/)
 	-   [Modernizr](http://modernizr.com/)
--   [JavaScript sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
--   [SASS](http://sass-lang.com/) (with sourcemaps)
--   [Normalize.css](http://necolas.github.io/normalize.css/)
--   A configurable base grid
--   A methodology for for writing styles, with some examples
--   HTML style guide markup

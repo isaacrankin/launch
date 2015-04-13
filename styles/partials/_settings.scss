@@ -1,15 +1,24 @@
+// Override Foundation settings
+// --------------------------------------------------------------------
+
+// Media Query Ranges
+$small-range: (0rem, 680px);
+$medium-range: (681px, 768px);
+$large-range: (769px, 1280px);
+
+// Grid settings
+$total-columns: 12;
+$row-width: 1200px;
+$column-gutter: 40px;
+
 // Global settings
 // --------------------------------------------------------------------
 
-// Layout
-$layout-breakpoint-medium: 768px;
-$layout-breakpoint-large: 1024px;
-
-// Colours
+// Example colours
 $colour-brand-primary: #F00;
 $colour-brand-secondary: #0F0;
 
-// Fonts
+// Example fonts
 $font-primary: 'Arial';
 $font-headings: 'Times';
 
