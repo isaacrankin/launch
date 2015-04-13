@@ -6,23 +6,24 @@ var config = require('../config');
 
 module.exports = function(){
 
-    var options = {
+    var task = {
         vendor: {
             files: {}
-        },
-        target: {
-            files: [{
-                sourceMap: true,
-                expand: true,
-                cwd: config.outputPath + 'styles',
-                src: ['app.css'],
-                dest: config.outputPath + 'styles',
-                ext: '.min.css'
-            }]
         }
+
+        // Optionally minify app.css but sourcemaps don't work
+        //target: {
+        //    files: [{
+        //        expand: true,
+        //        cwd: config.outputPath + 'styles',
+        //        src: ['app.css'],
+        //        dest: config.outputPath + 'styles',
+        //        ext: '.min.css'
+        //    }]
+        //}
     };
 
-    options.vendor.files[config.outputPath + 'styles/vendor.min.css'] = config.vendorFiles.styles;
+    task.vendor.files[config.outputPath + 'styles/vendor.min.css'] = config.vendorFiles.styles;
 
-    return options;
+    return task;
 }();

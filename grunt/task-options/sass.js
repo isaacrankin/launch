@@ -10,7 +10,7 @@ module.exports = {
     dist: {
         options: {
             style: 'compressed',
-            sourceMap: false,
+            sourceMap: true,
             quiet: true
         },
         files: [{
