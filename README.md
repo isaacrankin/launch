@@ -22,7 +22,7 @@ It includes popular front-end technologies such as SASS, jQuery, Foundation, Mod
 
 If these steps failed, check that you have all the dependencies installed.
 
-Use 'grunt clean' to delete the compiled directory and temp folder.
+Use `grunt clean` to delete the compiled directory and temp folder.
 
 ###Add New Vendor Libraries/Packages
 
