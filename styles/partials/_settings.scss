@@ -18,10 +18,11 @@ $column-gutter: 40px;
 
 // Example colours
 $colors: (
-    'red': (
-        tint: #f66,
-        base: #c00,
-        shade: #a00
+    'brand-primary': (
+        base: #00F
+    ),
+    'brand-secondary': (
+        base: #0F0
     ),
     'orange': (
         tint: #f94,
@@ -35,10 +36,8 @@ $colors: (
     )
 );
 
-
-$colour-brand-primary: #F00;
-$colour-brand-secondary: #0F0;
-
 // Example fonts
-$font-primary: 'Arial';
-$font-headings: 'Times';
+$fonts: (
+    'body': sans-serif,
+    'headings': monospace
+);
