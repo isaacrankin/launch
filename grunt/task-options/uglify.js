@@ -6,25 +6,22 @@
 
 var config = require('../config');
 
-module.exports = function(){
-
-    var task = {
-        vendor: {
-            files: {}
-        },
-        app: {
-            files: {},
-            options:{
-                sourceMap: true,
-                sourceMapIncludeSources: true,
-                cwd: config.tempPath
-            }
+module.exports = {
+    vendor: {
+        files: [{
+            src: [config.vendorFiles.scripts],
+            dest: config.outputPath + 'scripts/lib.min.js'
+        }]
+    },
+    app: {
+        files: [{
+            src: [config.tempPath + 'scripts/**/*.js'],
+            dest: config.outputPath + 'scripts/app.min.js'
+        }],
+        options:{
+            sourceMap: true,
+            sourceMapIncludeSources: true,
+            cwd: config.tempPath
         }
-    };
-
-    task.vendor.files[config.outputPath + 'scripts/lib.min.js'] = config.vendorFiles.scripts;
-    task.app.files[config.outputPath + 'scripts/app.min.js'] = config.workingFiles.scripts;
-
-    return task;
-
-}();
+    }
+};

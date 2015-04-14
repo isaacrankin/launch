@@ -71,7 +71,7 @@ module.exports = function (grunt) {
         'jshint',
         'babel',
         'newer:uglify',
-        'newer:modernizr',
+        'modernizr',
         'notify:scripts'
     ]);
 };

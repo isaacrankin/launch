@@ -6,23 +6,16 @@
 
 var config = require('../config');
 
-module.exports = function(){
-
-    var task = {
-        options: {
-            sourceMap: false
-        },
-        dist: {
-            files: [{
-                expand: true,
-                src: ['scripts/**/*.js'],
-                dest: config.tempPath,
-                ext: '.js'
-            }]
-        }
-    };
-
-    //task.dist.files[config.outputPath + 'scripts/app.js'] = config.tempPath + 'scripts/app.js';
-
-    return task;
-}();
+module.exports = {
+    options: {
+        sourceMap: false
+    },
+    dist: {
+        files: [{
+            expand: true,
+            src: ['scripts/**/*.js'],
+            dest: config.tempPath,
+            ext: '.js'
+        }]
+    }
+};
