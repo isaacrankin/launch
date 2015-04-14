@@ -36,6 +36,9 @@ If there is no [bower package](http://bower.io/search/), copy the files manually
 * [Bower](http://bower.io/)
 * [Grunt](http://gruntjs.com/)
 
+###Browser Support
+Evergreen browsers are supported, otherwise basically IE 9+.
+
 ###Features & Integrated Technologies
 
 -   [Grunt](http://gruntjs.com/) for the build process
