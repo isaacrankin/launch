@@ -43,11 +43,12 @@ Evergreen browsers are supported, otherwise basically IE 9+.
 
 ###Features & Integrated Technologies
 
+-   [Babel](http://babeljs.io/) - compiles ES6 to ES5
 -   [Grunt](http://gruntjs.com/) for the build process
 -   [Bower](http://bower.io/) for package management
 -   [SASS](http://sass-lang.com/)
 -   [Normalize.css](http://necolas.github.io/normalize.css/)
--   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid is used by default.
+-   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid and media queries are used by default.
 -   JavaScript
 	-   [jQuery](http://jquery.com/)
 	-   [Modernizr](http://modernizr.com/)
