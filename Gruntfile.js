@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'clean:build',
-        'newer:sass',
+        'sass',
         'newer:cssmin',
         'jshint',
         'babel',
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('styles', [
         'clean:build',
-        'newer:sass',
+        'sass',
         'newer:cssmin',
         'newer:autoprefixer',
         'modernizr',

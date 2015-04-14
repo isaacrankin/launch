@@ -1,5 +1,6 @@
-// Override Foundation settings
-// --------------------------------------------------------------------
+/**
+ * Override Foundation settings
+ */
 
 // Media Query Ranges
 $small-range: (0rem, 680px);
@@ -11,17 +12,33 @@ $total-columns: 12;
 $row-width: 1200px;
 $column-gutter: 40px;
 
-// Global settings
-// --------------------------------------------------------------------
+/**
+ * Global settings
+ */
 
 // Example colours
+$colors: (
+    'red': (
+        tint: #f66,
+        base: #c00,
+        shade: #a00
+    ),
+    'orange': (
+        tint: #f94,
+        base: #f50,
+        shade: #f12
+    ),
+    'yellow': (
+        tint: #ffa,
+        base: #ff0,
+        shade: #ff5
+    )
+);
+
+
 $colour-brand-primary: #F00;
 $colour-brand-secondary: #0F0;
 
 // Example fonts
 $font-primary: 'Arial';
 $font-headings: 'Times';
-
-// Sprites
-$sprite-width: 400px;
-$sprite-height: 400px;
