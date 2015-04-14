@@ -1,8 +1,8 @@
 ## [Launch](https://github.com/isaacwebfix/launch)
 
-Launch is a front-end boilerplate, it basically extends [HTML5 boilerplate](https://html5boilerplate.com/).
+Launch is a front-end boilerplate
 
-It includes popular front-end technologies such as SASS, jQuery, Foundation, Modernizr and Normalize.css, tied together with a Grunt build.
+It extends [HTML5 boilerplate](https://html5boilerplate.com/) and includes popular front-end technologies such as Babel, SASS, jQuery, Foundation, Modernizr and Normalize.css, tied together with a Grunt build.
 
 ###Installation & Usage
 
@@ -50,4 +50,4 @@ Evergreen browsers are supported, otherwise basically IE 9+.
 
 ###Notes
 
-- Sourcemaps with SASS map back to the original styles directory, so if your web root is `dist` sourcemaps won't work properly. This shouldn't be a problem for development.
+- Sourcemaps with SASS map back to the original styles directory, so if your web root is `dist` sourcemaps won't work properly.
