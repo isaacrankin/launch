@@ -10,14 +10,14 @@ module.exports = {
     "workingPath": "",
     "outputPath": "dist/",
     "tempPath": "tmp/",
-    "vendorPath": "vendor/",
+    "vendorPath": "node_modules/",
     "images": {
         "src": "images",
         "dest": "dist/images/"
     },
     "vendorFiles": {
         "styles": [
-            "vendor/normalize-css/normalize.css"
+            "node_modules/normalize-css/normalize.css"
         ],
         "scripts": []
     },

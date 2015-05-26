@@ -12,7 +12,7 @@ module.exports = {
 
     dist: {
         // [REQUIRED] Path to the build you're using for development.
-        'devFile' : config.workingPath + 'vendor/modernizr/modernizr.js',
+        'devFile' : config.vendorPath + 'grunt-modernizr/lib/modernizr-dev.js',
 
         // Path to save out the built file.
         'outputFile' : config.outputPath + 'scripts/vendor/modernizr.min.js',

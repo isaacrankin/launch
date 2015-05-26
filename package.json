@@ -2,7 +2,7 @@
   "name": "Launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "Gruntfile.js",
   "repository": "https://github.com/isaacwebfix/launch",
   "author": {
@@ -10,7 +10,6 @@
     "url": "http://isaacrankin.com/"
   },
   "scripts": {
-    "postinstall": "bower install"
   },
   "license": "BSD",
   "devDependencies": {
@@ -32,5 +31,10 @@
     "jit-grunt": "~0.9.1",
     "time-grunt": "~1.1.0",
     "xtend": "~4.0.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^5.5.2",
+    "jquery": "^2.1.4",
+    "normalize-css": "^2.3.1"
   }
 }
