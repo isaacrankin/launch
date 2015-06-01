@@ -1,0 +1,30 @@
+// --------------------------------------------------------------------------------------------
+// Override Foundation settings
+// --------------------------------------------------------------------------------------------
+
+// Media Query Ranges
+$small-range: (0rem, 680px);
+$medium-range: (681px, 768px);
+$large-range: (769px, 1280px);
+
+// Grid settings
+$total-columns: 12;
+$row-width: 1200px;
+$column-gutter: 40px;
+
+// --------------------------------------------------------------------------------------------
+// Global settings
+// --------------------------------------------------------------------------------------------
+
+// Example colours
+$color-brand-primary: (
+    base: #00F,
+    tint: #09F,
+    shade: #26F
+);
+
+// Example fonts
+$fonts: (
+    "body": sans-serif,
+    "headings": sans-serif
+);

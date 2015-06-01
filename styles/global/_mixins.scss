@@ -29,17 +29,6 @@
     }
 }
 
-@mixin sprite($width, $height, $x: center, $y:0, $key: "sprite") {
-    background-image: url("../images/#{$key}.png");
-    background-repeat: no-repeat;
-    background-position: $x $y;
-    background-size: $width $height;
-
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        background-image:url("../images/#{$key}-2x.png");
-    }
-}
-
 @mixin reset-list{
     padding: 0;
     margin: 0;

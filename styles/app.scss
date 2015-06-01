@@ -1,19 +1,15 @@
 // Settings & utilities
-@import "partials/settings";
-@import "partials/mixins";
+@import "global/settings";
+@import "global/mixins";
 
 // Vendor
 @import "../node_modules/foundation-sites/scss/foundation/components/_grid";
 
 // Global
 @import "global/base";
-@import "global/fonts";
 
 // Elements - small reusable UI - buttons, accordions, widgets etc.
 @import "elements/buttons";
 
 // Blocks - large chunks of UI, e.g. headers, footers or pages etc.
 @import "blocks/header";
-
-// Media Queries
-@import "global/device";
