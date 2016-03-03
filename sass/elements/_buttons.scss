@@ -11,15 +11,15 @@
 /*
 Example with Media Queries:
 
-.button{
+.button {
     width: 100%;
     background-color: $button-background-color;
 
-    @include device-medium-up {
+    @include breakpoint(medium up) {
         max-width: $button-medium-max-width;
     }
 
-    @include device-large-up{
+    @include breakpoint(large only) {
         max-width: $button-large-max-width;
     }
 }

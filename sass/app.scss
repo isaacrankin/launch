@@ -3,13 +3,22 @@
 @import "global/mixins";
 
 // Vendor
-@import "../node_modules/foundation-sites/scss/foundation/components/_grid";
+@import "../node_modules/normalize-css/normalize"; // leave off file extension to loaded into file
+
+// Foundation
+@import "../node_modules/foundation-sites/scss/util/util";
+@import "../node_modules/foundation-sites/scss/global";
+@import "../node_modules/foundation-sites/scss/grid/grid";
+
+@include foundation-global-styles;
+@include foundation-grid;
 
 // Global
 @import "global/base";
+@import "global/print";
 
 // Elements - small reusable UI - buttons, accordions, widgets etc.
 @import "elements/buttons";
 
 // Blocks - large chunks of UI, e.g. headers, footers or pages etc.
-@import "blocks/header";
+@import "blocks/primary-header";

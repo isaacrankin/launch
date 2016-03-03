@@ -1,42 +1,29 @@
-// Foundation Media Query shortcuts
-@mixin device-small-only {
-    @media #{$small-only} {
-        @content;
-    }
-}
-
-@mixin device-medium-only {
-    @media #{$medium-only} {
-        @content;
-    }
-}
-
-@mixin device-large-only {
-    @media #{$large-only} {
-        @content;
-    }
-}
-
-@mixin device-medium-up {
-    @media #{$medium-up} {
-        @content;
-    }
-}
-
-@mixin device-large-up {
-    @media #{$large-up} {
-        @content;
-    }
-}
-
-@mixin reset-list{
+@mixin reset-list {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-@mixin rounded($size: 10px){
+@mixin rounded($size: 10px) {
     width: $size;
     height: $size;
     border-radius: $size;
+}
+
+@mixin flex-center {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin psuedo-shape($placement: before, $width: 100%, $height: 100%) {
+    &:#{$placement} {
+        content: '';
+        position: absolute;
+        width: $width;
+        height: $height;
+    }
 }
