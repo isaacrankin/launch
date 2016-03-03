@@ -2,9 +2,8 @@
 .DS_Store
 .Thumbs
 .sass-cache
-node_modules/
-vendor/*
-!vendor/.gitkeep
-npm-debug.log
-dist
-tmp
+/node_modules/
+/vendor/*
+!/js/vendor/
+/npm-debug.log
+/dist
