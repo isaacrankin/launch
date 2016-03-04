@@ -1,5 +1,6 @@
 'use strict';
 
 $(function() {
-    console.log('Hello World');
+    let example = new Lib.ExampleModule();
+    console.log(example.hello('launch!'));
 });

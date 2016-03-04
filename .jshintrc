@@ -17,5 +17,8 @@
     "strict": true,
     "trailing": true,
     "smarttabs": true,
+    "globals": {
+        "Lib": true
+    },
     "predef": [ "$", "jQuery", "Modernizr"]
 }

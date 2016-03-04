@@ -12,6 +12,7 @@ const sassLint = require('gulp-sass-lint');
 var paths = {
     dist: './dist',
     scripts: [
+        './js/lib/lib.js',
         './js/lib/*.js',
         './js/app.js'
     ],
