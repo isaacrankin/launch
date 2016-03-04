@@ -8,31 +8,30 @@
     <meta name="author" content="">
     <meta name="theme-color" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Launch - Front-end Boilerplate</title>
+    <!-- Allow to run in full-screen mode on iOS. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Launch - front-end boilerplate</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="styles/vendor.min.css">
-    <link rel="stylesheet" href="styles/app.css">
-    <script src="scripts/vendor/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-    <header>
-        <h1><img src="apple-touch-icon.png" width="30" height="30" alt="Launch logo" /> <a href="https://github.com/isaacwebfix/launch">Launch</a></h1>
-        <h2>Front-end Boilerplate</h2>
+    <header class="primary-header">
+        <h1>Launch</h1>
+        <h2>A basic front-end boilerplate that is designed for creating static websites or easy integration with a CMS theme.</h2>
     </header>
-    <hr/>
-    <main role="main">
+    <main>
         <section>
             <h3>Setup</h3>
             <code title="enter in your terminal">npm install</code><br/>
-            <code title="enter in your terminal">grunt; grunt watch</code>
-            <p>If that didn't work, make sure <a href="http://nodejs.org/">Node.js</a> and <a href="http://gruntjs.com/getting-started">Grunt</a> are installed.</p>
+            <code title="enter in your terminal">gulp; gulp watch</code>
         </section>
     </main>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
-    <script src="scripts/app.min.js"></script>
+    <footer class="primary-footer">
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
