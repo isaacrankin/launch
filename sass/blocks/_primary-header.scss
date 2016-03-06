@@ -15,7 +15,7 @@ $header-background-color: #F1F1F1;
 
     h2 {
         font-size: 1.3em;
-        max-width: 400px;
+        max-width: 480px;
     }
 
     @include breakpoint(medium only) {
