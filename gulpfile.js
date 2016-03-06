@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
+const sourcemaps = require("gulp-sourcemaps");
 const rename = require('gulp-rename');
 const jshint = require('gulp-jshint');
 const sassLint = require('gulp-sass-lint');
@@ -12,9 +13,7 @@ const sassLint = require('gulp-sass-lint');
 var paths = {
     dist: './dist',
     scripts: [
-        './js/lib/lib.js',
-        './js/lib/*.js',
-        './js/app.js'
+        './js/**/*.js'
     ],
     sass: ['./sass/**/*.scss'],
     // files that simply get copied to dist folder
@@ -38,7 +37,10 @@ var paths = {
     ],
     // vendor scripts that shouldn't be combined
     copyVendorScripts: [
-        './node_modules/jquery/dist/*'
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/jquery/dist/jquery.min.map',
+        './node_modules/systemjs/dist/system.js',
+        './node_modules/systemjs/dist/system.js.map'
     ]
 };
 
@@ -52,14 +54,16 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(`${paths.dist}/css`));
 });
 
+// Compile application scripts with Babel to SystemJS modules
 gulp.task('scripts', function () {
-    return gulp.src(paths.scripts)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('app.min.js'))
-        .pipe(babel())
-        .pipe(uglify())
-        .pipe(gulp.dest(`${paths.dist}/js`));
+  return gulp.src(paths.scripts)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.dist + '/js'));
 });
 
 // Copy files to dist dir
@@ -82,7 +86,7 @@ gulp.task('copy-vendor-scripts', function () {
         .pipe(gulp.dest(`${paths.dist}/js/vendor`));
 });
 
-// Rerun the task when a file changes
+// Re-run the task when a file changes
 gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.vendorScripts, ['scripts']);

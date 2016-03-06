@@ -1,5 +1,5 @@
-Lib.ExampleModule = class {
+export default class {
     hello (message) {
         return `Hello ${message}`;
     }
-};
+}

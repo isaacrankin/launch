@@ -1,1 +1,0 @@
-window.Lib = window.Lib || {};

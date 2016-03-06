@@ -1,6 +1,8 @@
 'use strict';
 
+import ExampleModule from 'lib/example-module.js';
+
 $(function() {
-    let example = new Lib.ExampleModule();
-    console.log(example.hello('launch!'));
+    let example = new ExampleModule();
+    console.log(example.hello('ES6 Modules!'));
 });
