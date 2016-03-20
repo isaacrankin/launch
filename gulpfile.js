@@ -9,6 +9,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const rename = require('gulp-rename');
 const jshint = require('gulp-jshint');
 const sassLint = require('gulp-sass-lint');
+const browserSync = require('browser-sync').create();
 
 var paths = {
     dist: './dist',
@@ -88,10 +89,26 @@ gulp.task('copy-vendor-scripts', function () {
 
 // Re-run the task when a file changes
 gulp.task('watch', function () {
-    gulp.watch(paths.scripts, ['scripts']);
-    gulp.watch(paths.vendorScripts, ['scripts']);
+    gulp.watch([paths.scripts, paths.vendorScripts], ['scripts']);
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.copy, ['copy']);
+});
+
+// Use default task to launch Browsersync
+gulp.task('serve', ['default'], function () {
+
+    // Serve files from the dist directory
+    browserSync.init({
+        server: {
+            baseDir: paths.dist
+        }
+        // Add additional options https://www.browsersync.io/docs/options/
+    });
+
+    // Call reload after watch task triggered
+    gulp.watch([paths.scripts, paths.vendorScripts], ['scripts', browserSync.reload]);
+    gulp.watch(paths.sass, ['sass', browserSync.reload]);
+    gulp.watch(paths.copy, ['copy', browserSync.reload]);
 });
 
 gulp.task('default', ['sass', 'scripts', 'copy', 'copy-vendor-scripts', 'vendor-scripts']);

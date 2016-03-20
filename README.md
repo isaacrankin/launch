@@ -10,13 +10,17 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 `npm install`
 
-`gulp; gulp watch`
+`gulp serve`
+
+If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp; gulp watch` and user your own server.
 
 ## What's in the box
 
 -   [Babel](http://babeljs.io/)
+-   [Browsersync](https://www.browsersync.io/)
+-   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation
 -   [Gulp](http://gulpjs.com/)
--   [SASS](http://sass-lang.com/)
--   [Normalize.css](http://necolas.github.io/normalize.css/)
--   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid and media queries are used by default.
 -   [jQuery](http://jquery.com/)
+ framework is available but only the grid and media queries are used by default.
+-   [Normalize.css](http://necolas.github.io/normalize.css/)
+-   [SASS](http://sass-lang.com/)
