@@ -12,7 +12,7 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 `gulp; gulp watch`
 
-## Integrated Technologies
+## What's in the box
 
 -   [Babel](http://babeljs.io/)
 -   [Gulp](http://gulpjs.com/)
