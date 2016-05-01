@@ -15,30 +15,28 @@ const srcDir = './src';
 const distDir = './dist';
 
 var paths = {
-  dist: './dist',
-  scripts: [
-    './js/**/*.js'
-  ],
-  sass: ['./sass/**/*.scss'],
-  // files that simply get copied to dist folder
+  scripts: srcDir + '/js/**/*.js',
+  sass: srcDir + '/sass/**/*.scss',
+
+  // files that get copied to dist folder
   copy: [
-    './fonts',
-    './img',
-    './svg',
-    './.htaccess',
-    './apple-touch-icon.png',
-    './browserconfig.xml',
-    './crossdomain.xml',
-    './favicon.ico',
-    './*.html',
-    './robots.txt',
-    './tile.png',
-    './tile-wide.png'
+    srcDir + '/fonts/**/*.*',
+    srcDir + '/img/**/*.*',
+    srcDir + '/.htaccess',
+    srcDir + '/apple-touch-icon.png',
+    srcDir + '/browserconfig.xml',
+    srcDir + '/crossdomain.xml',
+    srcDir + '/favicon.ico',
+    srcDir + '/*.html',
+    srcDir + '/*.php',
+    srcDir + '/robots.txt',
+    srcDir + '/tile.png',
+    srcDir + '/tile-wide.png'
   ],
+
   // vendor scripts to get combined
-  vendorScripts: [
-    './js/vendor/*.js'
-  ],
+  vendorScripts: srcDir + '/js/vendor/*.js',
+
   // vendor scripts that shouldn't be combined
   copyVendorScripts: [
     './node_modules/jquery/dist/jquery.min.js',
@@ -53,7 +51,11 @@ gulp.task('sass', function () {
   .pipe(sassLint())
   .pipe(sassLint.format())
   .pipe(sassLint.failOnError())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(sass({
+    outputStyle: 'compressed',
+    // allow importing SASS from node_modules
+    includePaths: './node_modules/'
+  }).on('error', sass.logError))
   .pipe(rename('app.min.css'))
   .pipe(gulp.dest(`${distDir}/css`));
 });
@@ -72,8 +74,8 @@ gulp.task('scripts', function () {
 
 // Copy files
 gulp.task('copy', function () {
-  return gulp.src(paths.copy)
-  .pipe(gulp.dest(distDir));
+  return gulp.src(paths.copy, { base: srcDir })
+    .pipe(gulp.dest(distDir));
 });
 
 // Concat and ugilfy vendor scripts

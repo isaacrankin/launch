@@ -2,13 +2,17 @@
 @import "global/settings";
 @import "global/mixins";
 
+// NOTE: the 'node_modules' path has been added to the SASS include paths
+
 // Vendor
-@import "../node_modules/normalize-css/normalize"; // leave off file extension to loaded into file
+
+// leave off file extension to load into file
+@import "normalize-css/normalize";
 
 // Foundation
-@import "../node_modules/foundation-sites/scss/util/util";
-@import "../node_modules/foundation-sites/scss/global";
-@import "../node_modules/foundation-sites/scss/grid/grid";
+@import "foundation-sites/scss/util/util";
+@import "foundation-sites/scss/global";
+@import "foundation-sites/scss/grid/grid";
 
 @include foundation-global-styles;
 @include foundation-grid;

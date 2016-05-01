@@ -1,9 +1,12 @@
-.idea/
 .DS_Store
 .Thumbs
 .sass-cache
-/node_modules/
-/vendor/*
-!/js/vendor/
-/npm-debug.log
+node_modules/
+vendor/
+!src/js/vendor/
+npm-debug.log
 /dist
+
+# test build files
+src/svg/launch-example.svg
+src/img/launch-example.png
