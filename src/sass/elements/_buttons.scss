@@ -1,0 +1,27 @@
+/**
+* An example element: Button
+*
+* Configuration with namespaced variables:
+*
+* $button-background-color: purple;
+* $button-medium-max-width: 200px;
+* $button-large-max-width: 300px;
+*/
+
+/*
+
+Example with Media Queries:
+
+.button {
+  width: 100%;
+  background-color: $button-background-color;
+
+  @include breakpoint(medium up) {
+    max-width: $button-medium-max-width;
+  }
+
+  @include breakpoint(large only) {
+    max-width: $button-large-max-width;
+  }
+}
+*/

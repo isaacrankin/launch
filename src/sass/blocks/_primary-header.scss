@@ -1,0 +1,28 @@
+/**
+ * An example block: Header
+ *
+ * Configuration with namespace variables:
+ */
+
+$header-background-color: #F1F1F1;
+
+.primary-header {
+  padding: 2em;
+  background-color: $header-background-color;
+  border-bottom: 2px solid darken($header-background-color, 10);
+
+  h1 { margin-top: 0; }
+
+  h2 {
+    font-size: 1.3em;
+    max-width: 480px;
+  }
+
+  @include breakpoint(medium only) {
+    border-bottom-color: darken($header-background-color, 20);
+  }
+
+  @include breakpoint(large up) {
+    border-bottom-color: darken($header-background-color, 30);
+  }
+}
