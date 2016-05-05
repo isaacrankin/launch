@@ -12,7 +12,7 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 `gulp serve`
 
-If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp; gulp watch` and use your own server.
+If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp` then `gulp watch` and use your own server.
 
 ## What's in the box
 
