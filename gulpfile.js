@@ -41,6 +41,8 @@ var paths = {
   copyVendorScripts: [
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/jquery/dist/jquery.min.map',
+    './node_modules/systemjs/dist/system-polyfills.js',
+    './node_modules/systemjs/dist/system-polyfills.js.map',
     './node_modules/systemjs/dist/system.js',
     './node_modules/systemjs/dist/system.js.map'
   ]
