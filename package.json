@@ -2,7 +2,7 @@
   "name": "Launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate that is designed to be used for creating static websites or for easy integration with a CMS theme.",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "repository": "https://github.com/isaacwebfix/launch",
   "author": {
     "name": "Isaac Rankin",
@@ -23,6 +23,7 @@
     "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.8",
     "jshint": "^2.9.1"
   },
   "dependencies": {

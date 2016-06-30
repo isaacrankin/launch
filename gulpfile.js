@@ -10,6 +10,7 @@ const rename = require('gulp-rename');
 const jshint = require('gulp-jshint');
 const sassLint = require('gulp-sass-lint');
 const browserSync = require('browser-sync').create();
+const watch = require('gulp-watch');
 
 const srcDir = './src';
 const distDir = './dist';
@@ -48,7 +49,8 @@ var paths = {
   ]
 };
 
-gulp.task('sass', function () {
+var compileSass = function() {
+  console.log('Launch: Compiling sass...');
   return gulp.src(paths.sass)
   .pipe(sassLint())
   .pipe(sassLint.format())
@@ -60,10 +62,10 @@ gulp.task('sass', function () {
   }).on('error', sass.logError))
   .pipe(rename('app.min.css'))
   .pipe(gulp.dest(`${distDir}/css`));
-});
+};
 
-// Compile application scripts with Babel to SystemJS modules
-gulp.task('scripts', function () {
+var compileScripts = function() {
+  console.log('Launch: Compiling scripts...');
   return gulp.src(paths.scripts)
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
@@ -72,13 +74,23 @@ gulp.task('scripts', function () {
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(distDir + '/js'));
-});
+}
 
-// Copy files
-gulp.task('copy', function () {
+var copyFiles = function() {
+  console.log('Launch: Copying files...');
   return gulp.src(paths.copy, { base: srcDir })
     .pipe(gulp.dest(distDir));
+}
+
+gulp.task('watch', function () {
+  watch(paths.sass, compileSass);
+  watch(paths.scripts, compileScripts);
+  watch(paths.copy, copyFiles);
 });
+
+gulp.task('sass', compileSass);
+gulp.task('scripts', compileScripts);
+gulp.task('copy', copyFiles);
 
 // Concat and ugilfy vendor scripts
 gulp.task('vendor-scripts', function () {
@@ -94,14 +106,7 @@ gulp.task('copy-vendor-scripts', function () {
   .pipe(gulp.dest(`${distDir}/js/vendor`));
 });
 
-// Re-run the task when a file changes
-gulp.task('watch', function () {
-  gulp.watch([paths.scripts, paths.vendorScripts], ['scripts']);
-  gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.copy, ['copy']);
-});
-
-// Use default task to launch Browsersync
+// Browsersync server
 gulp.task('serve', ['default'], function () {
 
   // Serve files from the dist directory
