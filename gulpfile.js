@@ -11,6 +11,7 @@ const jshint = require('gulp-jshint');
 const sassLint = require('gulp-sass-lint');
 const browserSync = require('browser-sync').create();
 const watch = require('gulp-watch');
+const imagemin = require('gulp-imagemin');
 
 const srcDir = './src';
 const distDir = './dist';
@@ -18,6 +19,7 @@ const distDir = './dist';
 var paths = {
   scripts: srcDir + '/js/**/*.js',
   sass: srcDir + '/sass/**/*.scss',
+  svg: srcDir + '/svg/**/*.*',
 
   // files that get copied to dist folder
   copy: [
@@ -82,15 +84,29 @@ var copyFiles = function() {
     .pipe(gulp.dest(distDir));
 }
 
+var compressSvg = function () {
+  gulp.src(paths.svg)
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [
+        {removeViewBox: false},
+        {cleanupIDs: false}
+      ]
+    }))
+    .pipe(gulp.dest(`${distDir}/svg`));
+}
+
 gulp.task('watch', function () {
   watch(paths.sass, compileSass);
   watch(paths.scripts, compileScripts);
   watch(paths.copy, copyFiles);
+  watch(paths.svg, compressSvg);
 });
 
 gulp.task('sass', compileSass);
 gulp.task('scripts', compileScripts);
 gulp.task('copy', copyFiles);
+gulp.task('compress-svg', compressSvg);
 
 // Concat and ugilfy vendor scripts
 gulp.task('vendor-scripts', function () {
@@ -123,4 +139,4 @@ gulp.task('serve', ['default'], function () {
   gulp.watch(paths.copy, ['copy', browserSync.reload]);
 });
 
-gulp.task('default', ['sass', 'scripts', 'copy', 'copy-vendor-scripts', 'vendor-scripts']);
+gulp.task('default', ['sass', 'scripts', 'copy', 'compress-svg', 'copy-vendor-scripts', 'vendor-scripts']);
