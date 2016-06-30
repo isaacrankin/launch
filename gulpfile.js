@@ -122,6 +122,14 @@ gulp.task('copy-vendor-scripts', function () {
   .pipe(gulp.dest(`${distDir}/js/vendor`));
 });
 
+gulp.task('compress-images', function () {
+  gulp.src(srcDir + '/img/**/*.*')
+    .pipe(imagemin({
+      progressive: true
+    }))
+    .pipe(gulp.dest(`${distDir}/img`));
+});
+
 // Browsersync server
 gulp.task('serve', ['default'], function () {
 

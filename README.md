@@ -14,6 +14,10 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp` then `gulp watch` and use your own server.
 
+## Tasks
+
+There is a separate task for image compression `gulp compress-images`
+
 ## What's in the box
 
 -   [Babel](http://babeljs.io/) - so we can use ES2015.
