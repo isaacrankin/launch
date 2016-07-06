@@ -6,6 +6,7 @@ vendor/
 !src/js/vendor/
 npm-debug.log
 /dist
+.idea
 
 # test build files
 src/svg/launch-example.svg
