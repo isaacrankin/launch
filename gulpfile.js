@@ -76,13 +76,13 @@ var compileScripts = function() {
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(distDir + '/js'));
-}
+};
 
 var copyFiles = function() {
   console.log('Launch: Copying files...');
   return gulp.src(paths.copy, { base: srcDir })
     .pipe(gulp.dest(distDir));
-}
+};
 
 var compressSvg = function () {
   gulp.src(paths.svg)
@@ -94,7 +94,7 @@ var compressSvg = function () {
       ]
     }))
     .pipe(gulp.dest(`${distDir}/svg`));
-}
+};
 
 gulp.task('watch', function () {
   watch(paths.sass, compileSass);
@@ -125,6 +125,7 @@ gulp.task('copy-vendor-scripts', function () {
 gulp.task('compress-images', function () {
   gulp.src(srcDir + '/img/**/*.*')
     .pipe(imagemin({
+      verbose: true,
       progressive: true
     }))
     .pipe(gulp.dest(`${distDir}/img`));
