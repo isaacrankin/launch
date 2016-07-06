@@ -17,7 +17,7 @@ const srcDir = './src';
 const distDir = './dist';
 
 var paths = {
-  scripts: srcDir + '/js/**/*.js',
+  scripts: [srcDir + '/js/**/*.js', '!' + srcDir + '/js/vendor/**/*.js'],
   sass: srcDir + '/sass/**/*.scss',
   svg: srcDir + '/svg/**/*.*',
 
@@ -38,6 +38,7 @@ var paths = {
   ],
 
   // vendor scripts to get combined
+  // this is useful for small plugins or utilities 
   vendorScripts: srcDir + '/js/vendor/*.js',
 
   // vendor scripts that shouldn't be combined
