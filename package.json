@@ -2,7 +2,7 @@
   "name": "Launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate that is designed to be used for creating static websites or for easy integration with a CMS theme.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "repository": "https://github.com/isaacwebfix/launch",
   "author": {
     "name": "Isaac Rankin",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "foundation-sites": "^6.2.1",
-    "jquery": "^2.2.3",
+    "jquery": "^3.1.0",
     "normalize-css": "^2.3.1",
     "systemjs": "^0.19.27"
   }
