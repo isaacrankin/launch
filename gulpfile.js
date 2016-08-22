@@ -15,6 +15,7 @@ const imagemin = require('gulp-imagemin');
 
 const srcDir = './src';
 const distDir = './dist';
+const packagesDir = './node_modules';
 
 var paths = {
   scripts: [srcDir + '/js/**/*.js', '!' + srcDir + '/js/vendor/**/*.js'],
@@ -38,22 +39,28 @@ var paths = {
   ],
 
   // vendor scripts to get combined
-  // this is useful for small plugins or utilities 
+  // this is useful for small plugins or utilities
   vendorScripts: srcDir + '/js/vendor/*.js',
 
   // vendor scripts that shouldn't be combined
   copyVendorScripts: [
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/jquery/dist/jquery.min.map',
-    './node_modules/systemjs/dist/system-polyfills.js',
-    './node_modules/systemjs/dist/system-polyfills.js.map',
-    './node_modules/systemjs/dist/system.js',
-    './node_modules/systemjs/dist/system.js.map'
+    packagesDir + '/jquery/dist/jquery.min.js',
+    packagesDir + '/jquery/dist/jquery.min.map',
+    packagesDir + '/systemjs/dist/system-polyfills.js',
+    packagesDir + '/systemjs/dist/system-polyfills.js.map',
+    packagesDir + '/systemjs/dist/system.js',
+    packagesDir + '/systemjs/dist/system.js.map'
   ]
 };
 
+var swallowError = function (error) {
+  // If you want details of the error in the console
+  console.log(error.toString())
+  this.emit('end')
+};
+
 var compileSass = function() {
-  console.log('Launch: Compiling sass...');
+  console.log('Compiling sass...');
   return gulp.src(paths.sass)
   .pipe(sassLint())
   .pipe(sassLint.format())
@@ -68,19 +75,20 @@ var compileSass = function() {
 };
 
 var compileScripts = function() {
-  console.log('Launch: Compiling scripts...');
+  console.log('Compiling scripts...');
   return gulp.src(paths.scripts)
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
   .pipe(sourcemaps.init())
   .pipe(babel())
+  .on('error', swallowError)
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(distDir + '/js'));
 };
 
 var copyFiles = function() {
-  console.log('Launch: Copying files...');
+  console.log('Copying files...');
   return gulp.src(paths.copy, { base: srcDir })
     .pipe(gulp.dest(distDir));
 };
