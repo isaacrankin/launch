@@ -14,9 +14,9 @@ $breakpoints: (
 // Grid settings
 $grid-column-count: 12;
 $grid-row-width: 1200px;
-$grid-column-responsive-gutter: (
-  small: 20px,
-  medium: 30px
+$grid-column-gutter: (
+  small: 1rem,
+  medium: 2rem
 );
 
 // -----------------------------------------------------------------------------
@@ -30,4 +30,4 @@ $colour-brand-secondary: #09F;
 // Example fonts
 $font-body: sans-serif;
 $font-headings: sans-serif;
-$font-size-body: 18px;
+$font-size-body: 2em;
