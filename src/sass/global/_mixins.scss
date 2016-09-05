@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-@mixin rounded($size: 10px) {
+@mixin rounded($size: 100%) {
   width: $size;
   height: $size;
   border-radius: $size;
@@ -20,7 +20,7 @@
 }
 
 @mixin psuedo-shape($placement: before, $width: 100%, $height: 100%) {
-  &:#{$placement} {
+  &::#{$placement} {
     content: '';
     position: absolute;
     width: $width;

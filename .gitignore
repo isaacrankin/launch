@@ -10,5 +10,5 @@ npm-debug.log
 test/tmp/
 
 # test build files
-src/svg/launch-example.svg
-src/img/launch-example.png
+src/svg/example.svg
+src/img/example.png
