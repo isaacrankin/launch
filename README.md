@@ -14,9 +14,21 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp` then `gulp watch` and use your own server.
 
-## Tasks
+## Tests
 
-There is a separate task for image compression `gulp compress-images`
+`npm test` to run the tests.
+
+A useful way to automatically run the tests is with a pre-commit hook. Just copy `pre-commit` to `.git/hooks/` and apply the correct permissions with `chmod +x .git/hooks/post-commit`
+
+[Mocha](https://mochajs.org/) is used for unit testing. Because we are working with ES2015 modules, we compile to CommonJS modules first, using Babel. 
+
+## Build Tasks
+
+- `gulp` builds the project to the `dist` directory.
+- `gulp watch` listens for file changes and re-builds the project.
+- `gulp serve` builds the project, starts a Browsersync server and watches for file changes (hot reloading included).
+- `gulp compress-images` image compression.
+- `gulp test` runs the unit tests.
 
 ## What's in the box
 
