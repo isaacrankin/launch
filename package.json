@@ -1,7 +1,6 @@
 {
   "name": "launch",
   "title": "Launch",
-  "description": "A basic front-end boilerplate that is designed to be used for creating static websites or for easy integration with a CMS theme.",
   "version": "2.3.1",
   "repository": {
     "type": "git",
