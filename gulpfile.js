@@ -169,6 +169,12 @@ gulp.task('serve', ['default'], function () {
 
   // Serve files from the dist directory
   browserSync.init({
+    open: false,
+    ghostMode: {
+      clicks: true,
+      forms: true,
+      scroll: false
+    },
     server: {
       baseDir: distDir
     }
@@ -179,6 +185,7 @@ gulp.task('serve', ['default'], function () {
   gulp.watch([paths.scripts, paths.vendorScripts], ['scripts', browserSync.reload]);
   gulp.watch(paths.sass, ['sass', browserSync.reload]);
   gulp.watch(paths.copy, ['copy', browserSync.reload]);
+  gulp.watch(paths.svg, ['compress-svg', browserSync.reload]);
 });
 
 gulp.task('default', ['test', 'sass', 'scripts', 'copy', 'compress-svg', 'copy-vendor-scripts', 'vendor-scripts']);
