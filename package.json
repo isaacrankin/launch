@@ -1,15 +1,23 @@
 {
-  "name": "Launch",
+  "name": "launch",
   "title": "Launch",
   "description": "A basic front-end boilerplate that is designed to be used for creating static websites or for easy integration with a CMS theme.",
   "version": "2.3.1",
-  "repository": "https://github.com/isaacrankin/launch",
-  "author": {
-    "name": "Isaac Rankin",
-    "url": "http://isaacrankin.com/"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacrankin/launch.git"
   },
+  "author": "Isaac Rankin (http://isaacrankin.com/)",
   "scripts": {
     "test": "gulp test"
+  },
+  "bugs": {
+    "url": "https://github.com/isaacrankin/launch/issues"
+  },
+  "homepage": "https://github.com/isaacrankin/launch#readme",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
   },
   "license": "MIT",
   "devDependencies": {
