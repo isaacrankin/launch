@@ -1,0 +1,43 @@
+{
+  "srcDir": "./src",
+  "distDir": "./dist",
+  "testDir": "./test",
+  "packagesDir": "./node_modules",
+  "scripts": [
+    "./src/js/**/*.js",
+    "!./src/js/vendor/**/*.js"
+  ],
+  "sass": "./src/sass/**/*.scss",
+  "svg": "./src/svg/**/*.*",
+  "copy": [
+    "./src/fonts/**/*.*",
+    "./src/img/**/*.*",
+    "./src/.htaccess",
+    "./src/apple-touch-icon.png",
+    "./src/browserconfig.xml",
+    "./src/crossdomain.xml",
+    "./src/favicon.ico",
+    "./src/*.html",
+    "./src/*.php",
+    "./src/robots.txt",
+    "./src/tile.png",
+    "./src/tile-wide.png"
+  ],
+  "vendorScripts": [
+    "./src/js/vendor/*.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/slick-carousel/slick/slick.min.js"
+  ],
+  "copyVendorScripts": [
+    "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/jquery/dist/jquery.min.map",
+    "./node_modules/systemjs/dist/system-polyfills.js",
+    "./node_modules/systemjs/dist/system-polyfills.js.map",
+    "./node_modules/systemjs/dist/system.js",
+    "./node_modules/systemjs/dist/system.js.map"
+  ]
+}

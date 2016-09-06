@@ -14,46 +14,7 @@ const watch = require('gulp-watch');
 const imagemin = require('gulp-imagemin');
 const exec = require('child_process').exec;
 
-const srcDir = './src';
-const distDir = './dist';
-const testDir = './test';
-const packagesDir = './node_modules';
-
-var paths = {
-  scripts: [srcDir + '/js/**/*.js', '!' + srcDir + '/js/vendor/**/*.js'],
-  sass: srcDir + '/sass/**/*.scss',
-  svg: srcDir + '/svg/**/*.*',
-
-  // files that get copied to dist folder
-  copy: [
-    srcDir + '/fonts/**/*.*',
-    srcDir + '/img/**/*.*',
-    srcDir + '/.htaccess',
-    srcDir + '/apple-touch-icon.png',
-    srcDir + '/browserconfig.xml',
-    srcDir + '/crossdomain.xml',
-    srcDir + '/favicon.ico',
-    srcDir + '/*.html',
-    srcDir + '/*.php',
-    srcDir + '/robots.txt',
-    srcDir + '/tile.png',
-    srcDir + '/tile-wide.png'
-  ],
-
-  // vendor scripts to get combined
-  // this is useful for small plugins or utilities
-  vendorScripts: srcDir + '/js/vendor/*.js',
-
-  // vendor scripts that shouldn't be combined
-  copyVendorScripts: [
-    packagesDir + '/jquery/dist/jquery.min.js',
-    packagesDir + '/jquery/dist/jquery.min.map',
-    packagesDir + '/systemjs/dist/system-polyfills.js',
-    packagesDir + '/systemjs/dist/system-polyfills.js.map',
-    packagesDir + '/systemjs/dist/system.js',
-    packagesDir + '/systemjs/dist/system.js.map'
-  ]
-};
+var paths = require('./build-paths');
 
 var swallowError = function (error) {
   // If you want details of the error in the console
@@ -72,7 +33,7 @@ var compileSass = function () {
       includePaths: './node_modules/'
     }).on('error', sass.logError))
     .pipe(rename('app.min.css'))
-    .pipe(gulp.dest(`${distDir}/css`));
+    .pipe(gulp.dest(`${paths.distDir}/css`));
 };
 
 var compileScripts = function () {
@@ -87,7 +48,7 @@ var compileScripts = function () {
     .on('error', swallowError)
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(distDir + '/js'));
+    .pipe(gulp.dest(paths.distDir + '/js'));
 };
 
 // Compile to ES5 just for tests
@@ -99,12 +60,12 @@ var compileTestScripts = function () {
       plugins: ['transform-es2015-modules-commonjs']
     }))
     .on('error', swallowError)
-    .pipe(gulp.dest(testDir + '/tmp'));
+    .pipe(gulp.dest(paths.testDir + '/tmp'));
 };
 
 var copyFiles = function () {
-  return gulp.src(paths.copy, {base: srcDir})
-    .pipe(gulp.dest(distDir));
+  return gulp.src(paths.copy, {base: paths.srcDir})
+    .pipe(gulp.dest(paths.distDir));
 };
 
 var compressSvg = function () {
@@ -116,7 +77,7 @@ var compressSvg = function () {
         {cleanupIDs: false}
       ]
     }))
-    .pipe(gulp.dest(`${distDir}/svg`));
+    .pipe(gulp.dest(`${paths.distDir}/svg`));
 };
 
 gulp.task('watch', function () {
@@ -137,22 +98,22 @@ gulp.task('vendor-scripts', function () {
   return gulp.src(paths.vendorScripts)
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(`${distDir}/js`));
+    .pipe(gulp.dest(`${paths.distDir}/js`));
 });
 
 // Copy over vendor scripts that shouldn't be combined
 gulp.task('copy-vendor-scripts', function () {
   gulp.src(paths.copyVendorScripts)
-    .pipe(gulp.dest(`${distDir}/js/vendor`));
+    .pipe(gulp.dest(`${paths.distDir}/js/vendor`));
 });
 
 gulp.task('compress-images', function () {
-  gulp.src(srcDir + '/img/**/*.*')
+  gulp.src(paths.srcDir + '/img/**/*.*')
     .pipe(imagemin({
       verbose: true,
       progressive: true
     }))
-    .pipe(gulp.dest(`${distDir}/img`));
+    .pipe(gulp.dest(`${paths.distDir}/img`));
 });
 
 // Run mocha tests - this expects mocha to be installed locally not globally
@@ -176,7 +137,7 @@ gulp.task('serve', ['default'], function () {
       scroll: false
     },
     server: {
-      baseDir: distDir
+      baseDir: paths.distDir
     }
     // Add additional options https://www.browsersync.io/docs/options/
   });
