@@ -4,12 +4,12 @@
   "testDir": "./test",
   "packagesDir": "./node_modules",
   "scripts": [
-    "./src/js/**/*.js",
-    "!./src/js/vendor/**/*.js"
+    "./src/js/**/*.js"
   ],
   "sass": "./src/sass/**/*.scss",
   "svg": "./src/svg/**/*.*",
   "copy": [
+    "./src/manifest.json",
     "./src/fonts/**/*.*",
     "./src/img/**/*.*",
     "./src/.htaccess",

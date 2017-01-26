@@ -4,7 +4,8 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 
 ## Requirements
 
-- [Nodejs](https://nodejs.org/en/download/)
+- [Node.js](https://nodejs.org/en/)
+- [Gulp](http://gulpjs.com/)
 
 ## Setup
 
@@ -13,6 +14,14 @@ Launch is a basic front-end boilerplate that is designed for creating static web
 3. `gulp serve`
 
 If you don't want to use [Browsersync](https://www.browsersync.io/) just run `gulp` then `gulp watch` and use your own server.
+
+## Customisation
+
+Replace the Launch example meta-data with your own:
+
+- Update the example `./src/manifest.json` file with your application details, read about it [here](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+
+- Update the `./package.json` file with your application details.
 
 ## Tests
 
