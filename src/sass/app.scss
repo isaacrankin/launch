@@ -4,16 +4,15 @@
 
 // NOTE: the 'node_modules' path has been added to the SASS include paths
 
-// Vendor
-@import "global/vendor";
-
 // Foundation
 @import "foundation-sites/scss/util/util";
 @import "foundation-sites/scss/global";
 @import "foundation-sites/scss/grid/grid";
+@import "foundation-sites/scss/components/flex";
 
 @include foundation-global-styles;
 @include foundation-grid;
+@include foundation-flex-classes;
 
 // Global
 @import "global/base";
