@@ -36,5 +36,4 @@ A useful way to automatically run the tests is with a pre-commit hook. Just copy
 -   [Browsersync](https://www.browsersync.io/)
 -   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid and media queries are used by default.
 -   [Gulp](http://gulpjs.com/)
--   [jQuery](http://jquery.com/)
 -   [SASS](http://sass-lang.com/)

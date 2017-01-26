@@ -8,7 +8,6 @@ npm-debug.log
 /dist
 .idea
 test/tmp/
-tools
 
 # test build files
 src/svg/example.svg
