@@ -41,8 +41,8 @@ A useful way to automatically run the tests is with a pre-commit hook. Just copy
 
 ## What's in the box
 
--   [Babel](http://babeljs.io/) - so we can use ES2015.
--   [Browsersync](https://www.browsersync.io/)
--   [Foundation](http://foundation.zurb.com/docs/components/grid.html) - the entire Foundation framework is available but only the grid and media queries are used by default.
--   [Gulp](http://gulpjs.com/)
--   [SASS](http://sass-lang.com/)
+- [Babel](http://babeljs.io/)
+- [Browsersync](https://www.browsersync.io/)
+- [Foundation](http://foundation.zurb.com/sites/docs/) - The entire Foundation framework is available but only the 
+- [Gulp](http://gulpjs.com/)
+- [SASS](http://sass-lang.com/)

@@ -6,7 +6,7 @@
   "background_color": "#000",
   "theme_color": "#000",
   "description": "Your app description here...",
-  ​​"orientation": "portrait-primary",
+  "orientation": "portrait-primary",
   "dir": "ltr",
   "lang": "en-US",
   "icons": [{
