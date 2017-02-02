@@ -21,7 +21,7 @@ Replace the Launch example meta-data with your own:
 
 - Update the example `./src/manifest.json` file with your application details, read about it [here](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
-- Update the `./package.json` file with your application details.
+- Update the `./package.json` file with your application details, learn about it [here](https://docs.npmjs.com/files/package.json)
 
 ## Tests
 
@@ -29,7 +29,7 @@ Replace the Launch example meta-data with your own:
 
 A useful way to automatically run the tests is with a pre-commit hook. Just copy `pre-commit` to `.git/hooks/` and apply the correct permissions with `chmod +x .git/hooks/post-commit`
 
-[Mocha](https://mochajs.org/) is used for unit testing. Because we are working with ES2015 modules, we compile to CommonJS modules first, using Babel. 
+[Mocha](https://mochajs.org/) is used for unit testing. Because we are working with ES2015 modules, we transpile to CommonJS modules first, using Babel. 
 
 ## Build Tasks
 
@@ -43,6 +43,6 @@ A useful way to automatically run the tests is with a pre-commit hook. Just copy
 
 - [Babel](http://babeljs.io/)
 - [Browsersync](https://www.browsersync.io/)
-- [Foundation](http://foundation.zurb.com/sites/docs/) - The entire Foundation framework is available but only the 
+- [Foundation](http://foundation.zurb.com/sites/docs/) - The entire Foundation CSS framework is available but only the (flexbox) grid and flexbox classes are installed by default. 
 - [Gulp](http://gulpjs.com/)
 - [SASS](http://sass-lang.com/)
